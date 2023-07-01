@@ -63,7 +63,7 @@
 </footer>
 </div>
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU"></script> -->
 
 <?php $this->getScripts() ?>
 

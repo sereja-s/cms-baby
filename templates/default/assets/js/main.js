@@ -51,10 +51,13 @@ $(document).ready(function () {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 7000,
+			infinite: true,
+			speed: 1000,
+			fade: true,
 			prevArrow: ".banner__navigation--prev",
 			nextArrow: '.banner__navigation--next',
-			dots: true,
+			/* dots: true, */
 			customPaging: function customPaging(slider, i) {
 				return '<div class="banner__dot"></div>';
 			},
@@ -144,7 +147,7 @@ $(document).ready(function () {
 						slidesToShow: 2
 					}
 				}, {
-					breakpoint: 550,
+					breakpoint: 520,
 					settings: {
 						slidesToShow: 1
 					}

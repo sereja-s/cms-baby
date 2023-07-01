@@ -1,65 +1,60 @@
 <div class="content">
-	<section class="s-banner">
-		<div class="container">
-			<div class="banner">
-				<div class="banner__navigation banner__navigation--prev">
-					<svg class="svg-sprite-icon icon-shevron-right banner__navigation-icon">
-						<use xlink:href="assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-					</svg>
-				</div>
-				<div class="banner__navigation banner__navigation--next">
-					<svg class="svg-sprite-icon icon-shevron-right banner__navigation-icon">
-						<use xlink:href="assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-					</svg>
-				</div>
-				<div class="banner__dots"> </div>
-				<div class="js-banner">
-					<div class="banner__item">
-						<div class="banner__content">
-							<div class="banner__body"><span class="banner__title">Беговелы</span><span class="banner__derscr">Отличный подарок для детей от 1 года</span><a class="btn btn--transparent-white btn--round btn--inline" href="#">Выбрать</a></div>
-							<div class="banner__img-wrapper"><img class="banner__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/banner/img-1.png" alt="Картинка на баннере"></div>
-						</div>
-					</div>
-					<div class="banner__item">
-						<div class="banner__content">
-							<div class="banner__body"><span class="banner__title">Трехколесные велосипеды</span><span class="banner__derscr">Детские велосипеды произведенные в Германии</span><a class="btn btn--transparent-white btn--round btn--inline" href="#">Выбрать</a></div>
-							<div class="banner__img-wrapper"><img class="banner__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/banner/img-2.png" alt="Картинка на баннере"></div>
-						</div>
-					</div>
-					<div class="banner__item">
-						<div class="banner__content">
-							<div class="banner__body"><span class="banner__title">Двухколесные велосипеды</span><span class="banner__derscr">Большой выбор для детей от 4-х лет и старше:</span><a class="btn btn--transparent-white btn--round btn--inline" href="#">Выбрать</a></div>
-							<div class="banner__img-wrapper"><img class="banner__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/banner/img-3.png" alt="Картинка на баннере"></div>
-						</div>
-					</div>
-					<div class="banner__item">
-						<div class="banner__content">
-							<div class="banner__body"><span class="banner__title">Лонгборды</span><span class="banner__derscr">Выбор на любой вкус!</span><a class="btn btn--transparent-white btn--round btn--inline" href="#">Выбрать</a></div>
-							<div class="banner__img-wrapper"><img class="banner__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/banner/img-4.png" alt="Картинка на баннере"></div>
-						</div>
+
+	<?php if (!empty($sales)) : ?>
+
+		<section class="s-banner">
+			<div class="container">
+				<div class="banner">
+					<!-- <div class="banner__navigation banner__navigation--prev">
+						<svg class="svg-sprite-icon icon-shevron-right banner__navigation-icon">
+							<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+						</svg>
+					</div> -->
+					<!-- <div class="banner__navigation banner__navigation--next">
+						<svg class="svg-sprite-icon icon-shevron-right banner__navigation-icon">
+							<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+						</svg>
+					</div> -->
+					<div class="banner__dots"> </div>
+					<div class="js-banner">
+
+						<?php foreach ($sales as $item) : ?>
+
+							<div class="banner__item">
+								<div class="banner__content">
+									<div class="banner__body"><span class="banner__title"><?= $item['name'] ?></span><span class="banner__derscr"><?= $item['sub_title'] ?></span><a class="btn btn--transparent-white btn--round btn--inline" href="#">Выбрать</a></div>
+									<div class="banner__img-wrapper"><img class="banner__img" src="<?= $this->img($item['img']) ?>" alt="Картинка на баннере"></div>
+								</div>
+							</div>
+
+						<?php endforeach; ?>
+
+
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+
+	<?php endif; ?>
+
 	<section class="s-advantages">
 		<div class="container">
 			<div class="advantages">
 				<div class="advantage">
 					<svg class="svg-sprite-icon icon-guarantee advantage__icon">
-						<use xlink:href="assets/images/svg/symbol/sprite.svg#guarantee"></use>
+						<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#guarantee"></use>
 					</svg>
 					<div class="advantage__body"><span class="advantage__title">Гарантия</span><span class="advantage__descr">качества всех товаров</span></div>
 				</div>
 				<div class="advantage">
 					<svg class="svg-sprite-icon icon-delivery advantage__icon">
-						<use xlink:href="assets/images/svg/symbol/sprite.svg#delivery"></use>
+						<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#delivery"></use>
 					</svg>
 					<div class="advantage__body"><span class="advantage__title">Доставка</span><span class="advantage__descr">по Москве и области</span></div>
 				</div>
 				<div class="advantage">
 					<svg class="svg-sprite-icon icon-pay advantage__icon">
-						<use xlink:href="assets/images/svg/symbol/sprite.svg#pay"></use>
+						<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#pay"></use>
 					</svg>
 					<div class="advantage__body"><span class="advantage__title">Оплата</span><span class="advantage__descr">онлайн и наличными </span></div>
 				</div>
@@ -616,10 +611,10 @@
 					</div>
 					<div class="information-item__body">
 						<div class="news-prev__wrapper"><a class="news-prev" href="#">
-								<div class="news-prev__img" style="background-image:url('assets/images/content/news/img-1.jpg')"></div>
+								<div class="news-prev__img" style="background-image:url('<?= PATH . TEMPLATE ?>assets/images/content/news/img-1.jpg')"></div>
 								<div class="news-prev__body"><span class="news-prev__title">Выставка в Германии</span><span class="news-prev__date">13 июля 2018</span></div>
 							</a><a class="news-prev" href="#">
-								<div class="news-prev__img" style="background-image:url('assets/images/content/news/img-2.jpg')"></div>
+								<div class="news-prev__img" style="background-image:url('<?= PATH . TEMPLATE ?>assets/images/content/news/img-2.jpg')"></div>
 								<div class="news-prev__body"><span class="news-prev__title">Новинки в нашем магазине</span><span class="news-prev__date">2 июля 2018</span></div>
 							</a></div>
 					</div>
@@ -636,7 +631,7 @@
 					</div>
 					<div class="information-item__footer"><a class="information-item__link" href="#">Все отзывы </a></div>
 				</div>
-				<div class="information-item information-item--wide">
+				<!-- <div class="information-item information-item--wide">
 					<div class="information-item__header">
 						<h2 class="title-section">Бренды</h2>
 					</div>
@@ -655,7 +650,7 @@
 						</div>
 					</div>
 					<div class="information-item__footer"><a class="information-item__link" href="brands.html">Все бренды</a><span class="information-item__count">(10) </span></div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
