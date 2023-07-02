@@ -86,281 +86,62 @@
 			<div class="header__menu">
 				<div class="container">
 					<div class="header__content">
-						<nav class="header__main-nav main-nav">
-							<ul class="main-nav__list">
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Самокаты </a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Двухколесные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Трехколесные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С большими колесами</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С надувными колесами</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">3 в 1</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">4 в 1</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">5 в 1</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text"> Со светящимися колесами </span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Взрослые и подростки</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Двухколесные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Трехколесные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С большими колесами</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С надувными колесами </span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Городские</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С большими колесами</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С надувными колесами </span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Внедорожные</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С надувными колесами</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Трюковые</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для начинающих</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для профессионалов </span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Электросамокаты</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Городские</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Двухколесные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С большими колесами</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Чемоданы-самокаты</span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Беговелы</a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Беговелы 2 в 1</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Беговелы-каталки</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Беговелы-самокаты</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Спортивные</span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Велосипеды</a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Двухколесные</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Трехколесные</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Велосипеды-коляски</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Скоростные</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Трансформеры</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Четырехколесные</span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Скейты</a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Круизеры</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Лонгборды</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Пениборды </span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Роликовые коньки</a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Квады</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Раздвижные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Фитнес</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Взрослые и подростки</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Квады</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Раздвижные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Фитнес</span></a></li>
-													</ul>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Ледовые коньки</a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Прогулочные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Раздвижные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Фигурные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Хоккейные </span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Взрослые и подростки</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Прогулочные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Фигурные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Хоккейные</span></a></li>
-													</ul>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Батуты</a>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Большие</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для взрослых</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для дачи</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для дома</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для улицы</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Каркасные</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Мини-батуты</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">С сеткой</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Складные</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Спортивные</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Фитнес-батуты</span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="main-nav__item"><a class="main-nav__link" href="category.html">Еще</a>
-									<svg class="svg-sprite-icon icon-shevron-right main-nav__icon">
-										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-									</svg>
-									<div class="main-nav__dropdown-wrapper">
-										<div class="main-nav__dropdown">
-											<ul class="catalog-nav__list">
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Каталки</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Развивающие</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Снегокаты</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Взрослые</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для двоих</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Трюковые</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Тюбинги</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Детские</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Для взрослых</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Одноместные</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Тюбинг-машинка</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Спортивный инвентарь</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Батминтон</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Качели и спорткомплексы</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Надувные доски (SUP board)</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Товары для фитнеса</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Футбольные ворота</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Аксессуары</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Шлемы и защита</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Сумки и чехлы</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">К беговелам</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">К велосипедам</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">К настольным играм</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">К самокатам</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Запчасти</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">К велосипедам</span></a></li>
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">К самокатам</span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Рапродажа</span>
-														<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-															<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-														</svg></a>
-													<ul class="catalog-nav__list">
-														<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Зимний спорт </span></a></li>
-													</ul>
-												</li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Веломобили</span></a></li>
-												<li class="catalog-nav__item"><a class="catalog-nav__link" href="#"> <span class="catalog-nav__text">Настольные игры </span></a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</nav>
+
+						<?php if (!empty($this->category)) : ?>
+
+							<nav class="header__main-nav main-nav">
+								<ul class="main-nav__list">
+
+									<?php foreach ($this->recurseAllSort($this->category) as $item) : ?>
+
+										<li class="main-nav__item"><a class="main-nav__link" href="<?= !empty($item['sub']) ? '#' : $this->alias(['catalog' => $item['alias']]) ?>"><?= $item['name'] ?></a>
+											<div class="main-nav__dropdown-wrapper">
+												<div class="main-nav__dropdown">
+
+													<?php if (!empty($item['sub'])) : ?>
+
+														<ul class="catalog-nav__list">
+
+															<?php foreach ($item['sub'] as $sub) : ?>
+
+																<li class="catalog-nav__item"><a class="catalog-nav__link" href="<?= !empty($sub['sub']) ? '#' : $this->alias(['catalog' => $sub['alias']]) ?>"> <span class="catalog-nav__text"><?= $sub['name'] ?></span>
+																		<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
+																			<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+																		</svg></a>
+
+																	<?php if (!empty($sub['sub'])) : ?>
+
+																		<ul class="catalog-nav__list">
+
+																			<?php foreach ($sub['sub'] as $subsub) : ?>
+
+																				<li class="catalog-nav__item"><a class="catalog-nav__link" href="<?= $this->alias(['catalog' => $subsub['alias']]) ?>"> <span class="catalog-nav__text"><?= $subsub['name'] ?></span></a></li>
+
+																			<?php endforeach; ?>
+
+																		</ul>
+
+																	<?php endif; ?>
+
+																</li>
+
+															<?php endforeach; ?>
+
+														</ul>
+
+													<?php endif; ?>
+
+												</div>
+											</div>
+										</li>
+
+									<?php endforeach; ?>
+
+								</ul>
+							</nav>
+
+						<?php endif; ?>
+
 						<div class="header__search search">
 							<svg class="svg-sprite-icon icon-search search__icon">
 								<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#search"></use>
