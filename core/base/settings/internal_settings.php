@@ -79,6 +79,7 @@ const USER_CSS_JS = [
 		'assets/js/jquery-3.3.1.min.js',
 		'assets/js/libs.min.js',
 		'assets/js/main.js',
+		'assets/js/functions.js',
 	]
 ];
 

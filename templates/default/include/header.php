@@ -94,7 +94,9 @@
 
 									<?php foreach ($this->recurseAllSort($this->category) as $item) : ?>
 
-										<li class="main-nav__item"><a class="main-nav__link" href="<?= !empty($item['sub']) ? '#' : $this->alias(['catalog' => $item['alias']]) ?>"><?= $item['name'] ?></a>
+										<li class="main-nav__item">
+
+											<a class="main-nav__link" href="<?= !empty($item['sub']) ? '#' : $this->alias(['catalog' => $item['alias']]) ?>"><?= $item['name'] ?></a>
 											<div class="main-nav__dropdown-wrapper">
 												<div class="main-nav__dropdown">
 
@@ -104,10 +106,18 @@
 
 															<?php foreach ($item['sub'] as $sub) : ?>
 
-																<li class="catalog-nav__item"><a class="catalog-nav__link" href="<?= !empty($sub['sub']) ? '#' : $this->alias(['catalog' => $sub['alias']]) ?>"> <span class="catalog-nav__text"><?= $sub['name'] ?></span>
-																		<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-																			<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-																		</svg></a>
+																<li class="catalog-nav__item">
+																	<a class="catalog-nav__link" href="<?= $this->alias(['catalog' => $sub['alias']]) ?>"> <span class="catalog-nav__text"><?= $sub['name'] ?></span>
+
+																		<?php if (!empty($sub['sub'])) : ?>
+
+																			<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
+																				<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+																			</svg>
+
+																		<?php endif; ?>
+
+																	</a>
 
 																	<?php if (!empty($sub['sub'])) : ?>
 
@@ -182,46 +192,82 @@
 								</div>
 							</div>
 							<div class="mobile-menu__body">
-								<nav class="catalog-nav">
-									<ul class="catalog-nav__list">
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Самокаты</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Беговелы</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Велосипеды</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Ролики</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Скейты</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Батуты</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Аксессуары и запчасти</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Зимний спорт</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-										<li class="catalog-nav__item"><a class="catalog-nav__link" href="category.html"><span class="catalog-nav__text">Настольные игры</span>
-												<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-												</svg></a></li>
-									</ul>
-								</nav>
+
+								<?php if (!empty($this->category)) : ?>
+
+									<nav class="catalog-nav">
+										<ul class="catalog-nav__list">
+
+											<?php foreach ($this->recurseAllSort($this->category) as $item) : ?>
+
+												<li class="catalog-nav__item">
+
+													<a class="catalog-nav__link" href="<?= !empty($item['sub']) ? '#' : $this->alias(['catalog' => $item['alias']]) ?>"><span class="catalog-nav__text" style="font-size: 18px; font-weight: 600"><?= $item['name'] ?></span>
+
+														<?php if (!empty($item['sub'])) : ?>
+
+															<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
+																<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+															</svg>
+
+														<?php endif; ?>
+
+													</a>
+
+													<?php if (!empty($item['sub'])) : ?>
+
+														<ul class="sub-menu">
+
+															<?php foreach ($item['sub'] as $sub) : ?>
+
+																<li class="catalog-nav__item">
+																	<a class="catalog-nav__link" href="<?= $this->alias(['catalog' => $sub['alias']]) ?>"> <span class="catalog-nav__text" style="font-size: 16px;"><?= $sub['name'] ?></span>
+
+																		<?php if (!empty($sub['sub'])) : ?>
+
+																			<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
+																				<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+																			</svg>
+
+																		<?php endif; ?>
+
+																	</a>
+
+																	<?php if (!empty($sub['sub'])) : ?>
+
+																		<ul>
+
+																			<?php foreach ($sub['sub'] as $subsub) : ?>
+
+																				<li class="catalog-nav__item"><a class="catalog-nav__link" href="<?= $this->alias(['catalog' => $subsub['alias']]) ?>"> <span class="catalog-nav__text" style="font-size: 14px;"><?= $subsub['name'] ?></span></a></li>
+
+																			<?php endforeach; ?>
+
+																		</ul>
+
+																	<?php endif; ?>
+
+																</li>
+
+
+															<?php endforeach; ?>
+
+														</ul>
+
+													<?php endif; ?>
+
+												</li>
+
+											<?php endforeach; ?>
+
+											<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
+												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
+											</svg></a></li>
+										</ul>
+									</nav>
+
+								<?php endif; ?>
+
 								<nav class="inform-nav inform-nav--col">
 									<ul class="inform-nav__list">
 										<li class="inform-nav__item"><a class="inform-nav__link" href="static-page.html">О компании</a></li>
@@ -233,6 +279,7 @@
 										<li class="inform-nav__item"><a class="inform-nav__link" href="">Контакты</a></li>
 									</ul>
 								</nav>
+
 							</div>
 							<div class="mobile-menu__footer">
 								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="tel:84951203034">+7 (495) 120-30-34</a><a class="mobile-menu__phone-link" href="#">Заказать звонок</a></div>

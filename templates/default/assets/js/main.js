@@ -22,6 +22,15 @@ $(document).ready(function () {
 			parentList.css('height', 'auto');
 			parentList.css('width', 'auto');
 		});
+
+		if ($(window).width() < 1140) {
+
+			$(document).on('click', '.catalog-nav__item', function () {
+
+				$(this).toggleClass('catalog-nav__item--active');
+				$(this).siblings().removeClass('catalog-nav__item--active');
+			})
+		}
 	};
 	/* Поиск */
 
@@ -198,8 +207,10 @@ $(document).ready(function () {
 			$(this).closest('.mobile-menu').removeClass('mobile-menu--open');
 		});
 	};
-	/* Функция для перекидки сертификата на разрешении экрана под планшеты */
 
+
+
+	/* Функция для перекидки сертификата на разрешении экрана под планшеты */
 
 	var brandInfo = function brandInfo() {
 		if (window.innerWidth < 1140 && window.innerWidth > 767) {
