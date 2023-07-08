@@ -1446,6 +1446,7 @@ footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .inform-nav__item {
@@ -1566,7 +1567,8 @@ footer {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	position: relative;
+	flex-wrap: wrap;
+	/* position: relative; */
 }
 
 .main-nav__item {
@@ -1574,6 +1576,7 @@ footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	position: relative;
 }
 
 .main-nav__item:last-child {
@@ -2834,7 +2837,13 @@ footer {
 
 @media screen and (max-width: 375px) {
 	.banner__title {
-		font-size: 24px;
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.banner__title {
+		font-size: 20px;
 	}
 }
 
@@ -4911,7 +4920,7 @@ footer {
 		.sub-menu {
 			display: block;
 		}
-		
+
 	}
 }
 

@@ -21,12 +21,21 @@
 					<div class="header__content">
 						<nav class="header__nav inform-nav">
 							<ul class="inform-nav__list">
-								<li class="inform-nav__item"><a class="inform-nav__link" href="static-page.html">О компании</a></li>
-								<li class="inform-nav__item"><a class="inform-nav__link" href="">Доставка и оплата</a></li>
-								<li class="inform-nav__tablet-hide inform-nav__item"><a class="inform-nav__link" href="">Акции</a></li>
-								<li class="inform-nav__tablet-hide inform-nav__item"><a class="inform-nav__link" href="">Поставщикам</a></li>
-								<li class="inform-nav__tablet-hide inform-nav__item"><a class="inform-nav__link" href="">Новости</a></li>
-								<li class="inform-nav__tablet-hide inform-nav__item"><a class="inform-nav__link" href="">Гарантии</a></li>
+								<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias('catalog') ?>">Все товары</a></li>
+								<!-- <li class="inform-nav__item"><a class="inform-nav__link" href="static-page.html">О компании</a></li> -->
+
+								<?php if (!empty($this->menu['information'])) : ?>
+
+									<?php foreach ($this->menu['information'] as $item) : ?>
+
+										<li class="inform-nav__tablet-hide inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias(['information' => $item['alias']]) ?>"><?= $item['name'] ?></a></li>
+
+									<?php endforeach; ?>
+
+								<?php endif; ?>
+
+
+								<li class="inform-nav__item"><a class="inform-nav__link" href="">Новости</a></li>
 								<li class="inform-nav__item"><a class="inform-nav__link" href="">Контакты</a></li>
 								<li class="inform-nav__tablet-toggle">
 									<svg class="svg-sprite-icon icon-dots inform-nav__tablet-icon">
@@ -35,10 +44,17 @@
 									<div class="inform-subnav">
 										<div class="inform-subnav__arrow"></div>
 										<ul class="inform-subnav__list">
-											<li class="inform-subnav__item"><a class="inform-subnav__link" href="#">Акции</a></li>
-											<li class="inform-subnav__item"><a class="inform-subnav__link" href="#">Поставщикам</a></li>
-											<li class="inform-subnav__item"><a class="inform-subnav__link" href="#">Новости</a></li>
-											<li class="inform-subnav__item"><a class="inform-subnav__link" href="#">Гарантии</a></li>
+
+											<?php if (!empty($this->menu['information'])) : ?>
+
+												<?php foreach ($this->menu['information'] as $item) : ?>
+
+													<li class="inform-subnav__item"><a class="inform-subnav__link" href="<?= $this->alias(['information' => $item['alias']]) ?>"><?= $item['name'] ?></a></li>
+
+												<?php endforeach; ?>
+
+											<?php endif; ?>
+
 										</ul>
 									</div>
 								</li>
@@ -260,9 +276,6 @@
 
 											<?php endforeach; ?>
 
-											<svg class="svg-sprite-icon icon-shevron-right catalog-nav__icon">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#shevron-right"></use>
-											</svg></a></li>
 										</ul>
 									</nav>
 
@@ -270,21 +283,45 @@
 
 								<nav class="inform-nav inform-nav--col">
 									<ul class="inform-nav__list">
-										<li class="inform-nav__item"><a class="inform-nav__link" href="static-page.html">О компании</a></li>
-										<li class="inform-nav__item"><a class="inform-nav__link" href="">Доставка и оплата</a></li>
-										<li class="inform-nav__item"><a class="inform-nav__link" href="">Акции</a></li>
-										<li class="inform-nav__item"><a class="inform-nav__link" href="">Поставщикам</a></li>
-										<li class="inform-nav__item"><a class="inform-nav__link" href="">Новости</a></li>
-										<li class="inform-nav__item"><a class="inform-nav__link" href="">Гарантии</a></li>
-										<li class="inform-nav__item"><a class="inform-nav__link" href="">Контакты</a></li>
+										<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias('catalog') ?>">Все товары</a></li>
+
+										<?php if (!empty($this->menu['information'])) : ?>
+
+											<?php foreach ($this->menu['information'] as $item) : ?>
+
+												<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias(['information' => $item['alias']]) ?>"><?= $item['name'] ?></a></li>
+
+											<?php endforeach; ?>
+
+										<?php endif; ?>
+
+										<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias('news') ?>">Новости</a></li>
+										<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias('contacts') ?>">Контакты</a></li>
 									</ul>
 								</nav>
 
 							</div>
-							<div class="mobile-menu__footer">
+							<div class="mobile-menu__footer" style="flex-wrap: wrap;">
+
 								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="tel:84951203034">+7 (495) 120-30-34</a><a class="mobile-menu__phone-link" href="#">Заказать звонок</a></div>
 								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="tel:88007077518">8 (800) 707-75-18</a><span class="mobile-menu__phone-text">Звонок бесплатный </span></div>
+
+								<?php if (!empty($this->socials)) : ?>
+
+									<ul class="socials" style="display: flex;">
+
+										<?php foreach ($this->socials as $item) : ?>
+
+											<li class="socials__item" style="padding-top: 10px; width: 50px;"><a class="socials__link" href="<?= $this->alias($item['external_alias']) ?>"><img class="socials__icon" src="<?= $this->img($item['img']) ?>" alt="<?= $item['name'] ?>"></a></li>
+
+										<?php endforeach; ?>
+
+									</ul>
+
+								<?php endif; ?>
+
 							</div>
+
 						</div>
 					</div>
 					<div class="mobile__logo logo"><img class="logo__img" src="<?= $this->img($this->set['img']) ?>" alt="<?= $this->set['name'] ?>"></div>
@@ -311,7 +348,7 @@
 									<svg class="svg-sprite-icon icon-user mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#user"></use>
 									</svg></a></li>
-							<li class="mobile-user-nav__item"><a class="mobile-user-nav__link" href="#">
+							<li class="mobile-user-nav__item"><a class="mobile-user-nav__link" href="<?= $this->alias('cart') ?>">
 									<svg class="svg-sprite-icon icon-basket mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#basket"></use>
 									</svg></a></li>

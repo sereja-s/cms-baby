@@ -610,13 +610,15 @@
 						<h2 class="title-section">Новости</h2>
 					</div>
 					<div class="information-item__body">
-						<div class="news-prev__wrapper"><a class="news-prev" href="#">
-								<div class="news-prev__img" style="background-image:url('<?= PATH . TEMPLATE ?>assets/images/content/news/img-1.jpg')"></div>
+						<div class="news-prev__wrapper">
+							<a class="news-prev" href="#">
+								<img src="<?= PATH . TEMPLATE ?>assets/images/content/news/img-1.jpg" class="news-prev__img"></img>
 								<div class="news-prev__body"><span class="news-prev__title">Выставка в Германии</span><span class="news-prev__date">13 июля 2018</span></div>
 							</a><a class="news-prev" href="#">
-								<div class="news-prev__img" style="background-image:url('<?= PATH . TEMPLATE ?>assets/images/content/news/img-2.jpg')"></div>
+								<img src="<?= PATH . TEMPLATE ?>assets/images/content/news/img-2.jpg" class="news-prev__img"></img>
 								<div class="news-prev__body"><span class="news-prev__title">Новинки в нашем магазине</span><span class="news-prev__date">2 июля 2018</span></div>
-							</a></div>
+							</a>
+						</div>
 					</div>
 					<div class="information-item__footer"><a class="information-item__link" href="#">Все новости</a></div>
 				</div>
