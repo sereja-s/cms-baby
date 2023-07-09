@@ -75,7 +75,6 @@ class Model extends \core\base\model\BaseModel
 
 
 			// Получим цены:
-
 			if ($catalogPrices !== false && !empty($this->showColumns('goodsnew')['price'])) {
 
 				// MIN() и MAX()- функции SQL
@@ -90,11 +89,8 @@ class Model extends \core\base\model\BaseModel
 				}
 			}
 
-			//$a = 1;
-
 
 			// Получим фильтры:
-
 			if ($catalogFilters !== false && in_array('filters', $this->showTables())) {
 
 				// родительские названия фильтров
@@ -132,8 +128,7 @@ class Model extends \core\base\model\BaseModel
 					$filtersOrder[] = 'menu_position';
 				}
 
-
-				// получаем фильтры
+				// формируем запрос для получения фильтров
 				$filters = $this->get('filters', [
 					'where' => $filtersWhere,
 					'join' => [
@@ -173,27 +168,26 @@ class Model extends \core\base\model\BaseModel
 					// 'return_query' => true
 				]);
 
-				// Сделаем подсчёт количества товаров в конкретном фильтре (относительно категории в которой находимся) отдельным запросом:
 
+				// Сделаем подсчёт количества товаров в конкретном фильтре (относительно категории в которой находимся) отдельным запросом:
 				if ($filters) {
 
-					// implode() — объединение элементов массива со строкой
-					// (Возвращает строку, содержащую строковое представление всех элементов массива в одном порядке со 
-					// строкой-разделителем (здесь- запятая) между каждым элементом)
-					// array_column() — возвращает значения из одного столбца во входном массиве
+					// implode() — Объединяет элементы массива в строку
+					// (Возвращает строку, содержащую строковое представление всех элементов массива в указанном порядке с 
+					// разделителем (здесь- запятая) между каждым элементом)
+					// array_column() — возвращает массив из значений столбца массива (1-ый на вход- здесь: $filters) с ключом (2-ой на вход- здесь: id и goodsnew_id во втором выражении)
 
-					// Получим все уникальные id для фильтров и товаров из массива в переменной: $filters
-
+					// Получим все уникальные id фильтров из массива в переменной: $filters
 					$filtersIds = implode(',', array_unique(array_column($filters, 'id')));
 
+					// Получим все уникальные goodsnew_id товаров из массива в переменной: $filters
 					$goodsIds = implode(',', array_unique(array_column($filters, 'goodsnew_id')));
 
 					$query = "SELECT `filters_id` as id, COUNT(goodsnew_id) as count FROM goodsnew_filters WHERE filters_id IN ($filtersIds) AND goodsnew_id IN ($goodsIds) GROUP BY filters_id";
 
-					// количество товаров в конкретных фильтрах (относительно категории в которой находимся) отдельным запросом (придёт: id для каждого фильтра и кол-во товаров, для которых он применён):
+					// получим количество товаров в конкретных фильтрах (относительно категории в которой находимся) отдельным 
+					// запросом (придёт: id для каждого фильтра и кол-во товаров, для которых он применён):
 					$goodsCountDb = $this->query($query);
-
-					// $a = 1;
 
 					$goodsCount = [];
 
@@ -207,10 +201,10 @@ class Model extends \core\base\model\BaseModel
 					}
 
 
-					// формируем фильтр каталога
+					// Формируем фильтр каталога
 					$catalogFilters = [];
 
-					// пересоберём данные в переменой: $filters
+					// пересоберём данные в переменой: $filters разделяя родительские категории фильтров и их дочерние подкатегории
 					foreach ($filters as $item) {
 
 						$parent = [];
@@ -219,9 +213,12 @@ class Model extends \core\base\model\BaseModel
 
 						foreach ($item as $row => $rowValue) {
 
-							// определим родительскую категорию (в массиве: её данные с префиксом: f_): фильтр
+							// определим родительскую категорию фильтра (в массиве: её данные указаны с префиксом: f_)
+							// strpos()- Ищет позицию первого вхождения подстроки needle(на вход 2-ой) в строку haystack(1-ый)
 							if (strpos($row, 'f_') === 0) {
 
+								// preg_replace()- Выполняет поиск совпадений в строке subject(3-ий на вход) с шаблоном pattern
+								// (1-ый) и заменяет их на replacement(2-ой)
 								$name = preg_replace('/^f_/', '', $row);
 
 								// в ячейку с именем родителя положим его значение
@@ -250,7 +247,7 @@ class Model extends \core\base\model\BaseModel
 						}
 
 
-						// сформируем фильтры
+						// Сформируем фильтры
 						$catalogFilters[$parent['id']]['values'][$child['id']] = $child;
 
 						if (isset($goodsnew[$item['goodsnew_id']])) {
@@ -266,186 +263,6 @@ class Model extends \core\base\model\BaseModel
 					}
 				}
 			}
-
-
-
-			// сформируем категории с вложенностями (подкатегориями)
-
-			/* if ($catalogCat !== false && in_array('category', $this->showTables())) {
-
-				// родительские названия фильтров
-				$parentCategoryFields = [];
-
-				// блок условий
-				$categoryWhere = [];
-
-				// блок сортировки
-				$categoryOrder = [];
-
-				// получим все данные родителя(название категории) и его подкатегории в распределённом виде
-				foreach ($this->showColumns('category') as $name => $item) {
-
-					// по условию забираем названия полей только те, которые являются массивом
-					if (!empty($item) && is_array($item)) {
-
-						// в поля собираем названия
-						$parentCategoryFields[] = $name . ' as cat_' . $name; // что бы отличать родителя от значения, укажем им псевдоним
-					}
-				}
-
-
-				// если есть соответствующая ячейка: visible
-				if (!empty($this->showColumns('category')['visible'])) {
-
-					// в блоке условий установим начение:
-					$categoryWhere['visible'] = 1;
-				}
-
-				// если есть соответствующая ячейка: menu_position
-				if (!empty($this->showColumns('category')['menu_position'])) {
-
-					// в блок сортировки запишем:
-					$categoryOrder[] = 'menu_position';
-				}
-
-
-				// получаем подкатегории товаров с привязкой к категориям
-				$category = $this->get('category', [
-					'where' => $categoryWhere,
-					'join' => [
-						// соединяем таблицу с самой собой
-						'category cat_name' => [
-							'type' => 'INNER',  // т.к. нам не нужно чтобы приходило значение если нет родителя
-							'fields' => $parentCategoryFields,
-							'where' => $categoryWhere,
-							// укажем признак (из предыдущей таблицы- поле: parent_id смотрит на текущую- поле: id)
-							'on' => ['parent_id', 'id']
-						],
-						// нам нужен джоин(связь) с таблицей связей
-						'goodsnew_category' => [
-							// применим расширенный режим (с указанием ключа: 'on') т.к. смотрим не на предыдущую таблицу (здесь- filters f_name), а на другую
-							'on' => [
-								'table' => 'category',
-								// получим поле(id) из предыдущей таблицы(здесь- category) должно смотреть на поле(category_id) 
-								// текущей(здесь- goodsnew_category) 
-								'fields' => ['id', 'category_id']
-							],
-							'where' => [
-								// строим подзапрос (вложенный запрос) Будем искать: goodsnew_id (т.е. полуим идентификаторы 
-								// всех товаров (т.к. блок с категориями нам надо получить для всех товаров), имеющихся в разделе, согласно условию: where)
-								'goodsnew_id' => $this->get('goodsnew', [
-									'fields' => [$this->showColumns('goodsnew')['id_row']],
-									'where' => $set['where'] ?? null,
-									// Выпуск №132
-									'operand' => $set['operand'] ?? null,
-									'return_query' => true
-								])
-							],
-
-							'operand' => ['IN'],
-						]
-					],
-
-					// 'return_query' => true
-				]);
-
-				// Сделаем подсчёт количества товаров в конкретной категории (в которой находимся) отдельным запросом:
-
-				if ($category) {
-
-					// implode() — объединение элементов массива со строкой
-					// (Возвращает строку, содержащую строковое представление всех элементов массива в одном порядке со 
-					// строкой-разделителем (здесь- запятая) между каждым элементом)
-					// array_column() — возвращает значения из одного столбца во входном массиве
-
-					// Получим все уникальные id для категорий из массива в переменной: $category
-					$categoryIds = implode(',', array_unique(array_column($category, 'id')));
-
-					// Получим все уникальные id товаров в категориях из массива в переменной: $category
-					$goodsIdscat = implode(',', array_unique(array_column($category, 'goodsnew_id')));
-
-					$queryCat = "SELECT `category_id` as id, COUNT(goodsnew_id) as count FROM goodsnew_category WHERE category_id IN ($categoryIds) AND goodsnew_id IN ($goodsIdscat) GROUP BY category_id";
-
-					// количество товаров в конкретных категориях (относительно категории в которой находимся) отдельным запросом (придёт: id категории и кол-во товаров в этой категории):
-					$goodsCountCatDb = $this->query($queryCat);
-
-					$goodsCountCat = [];
-
-					if ($goodsCountCatDb) {
-
-						foreach ($goodsCountCatDb as $item) {
-
-							// в ячейку с ключём: id (для каждой категории) положим значение (массив): id категории и кол-во товаров в ней
-							$goodsCountCat[$item['id']] = $item;
-						}
-					}
-
-
-					// формируем категории каталога
-					$catalogCat = [];
-
-					// пересоберём данные в переменой: $category
-					foreach ($category as $item) {
-
-						$parent = [];
-
-						$child = [];
-
-						// пробежимся в цикле по всем полям данной категории
-						foreach ($item as $row => $rowValue) {
-
-							// определим родительскую категорию (в массиве: её данные с префиксом: cat_)
-							if (strpos($row, 'cat_') === 0) {
-
-								$name = preg_replace('/^cat_/', '', $row);
-
-								// в ячейку с именем родителя положим его значение
-								$parent[$name] = $rowValue;
-
-								// иначе это данные дочерней категории: значения категории
-							} else {
-
-								// в ячейку с именем дочерней категории положим соответственно её значение
-								$child[$row] = $rowValue;
-							}
-						}
-
-
-						if (isset($goodsCountCat[$child['id']]['count'])) {
-
-							$child['count'] = $goodsCountCat[$child['id']]['count'];
-						}
-
-						if (empty($catalogCat[$parent['id']])) {
-
-							$catalogCat[$parent['id']] = $parent;
-
-							// создадим элемент для сбора значений категорий и инициализируем его пустым массивом
-							$catalogCat[$parent['id']]['values'] = [];
-						}
-
-
-						// сформируем в категориях(родителях) их подкатегории(детей)
-						$catalogCat[$parent['id']]['values'][$child['id']] = $child;
-
-						if (isset($goodsnew[$item['goodsnew_id']])) {
-
-							if (empty($goodsnew[$item['goodsnew_id']]['category'][$parent['id']])) {
-
-								// создаём в соотвуествующем товаре ячейку: category, а в неё ячейку, соответствующую id 
-								// родительской категории товара и кладём туда массив с полями этой категории 
-								$goodsnew[$item['goodsnew_id']]['category'][$parent['id']] = $parent;
-								// и уже там создаём ячейку: values(для массивов полей дочерних категорий(подкатегорий)) в 
-								// которую пока положим пустой массив
-								$goodsnew[$item['goodsnew_id']]['category'][$parent['id']]['values'] = [];
-							}
-
-							// в ячейку: values будут собраны все дочерние категории(подкатегории) которым принадлежит данный товар (с указанием кол-ва)
-							$goodsnew[$item['goodsnew_id']]['category'][$parent['id']]['values'][$item['id']] = $child;
-						}
-					}
-				}
-			} */
 		}
 
 		return $goodsnew ?? null;

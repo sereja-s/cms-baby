@@ -35,8 +35,8 @@
 								<?php endif; ?>
 
 
-								<li class="inform-nav__item"><a class="inform-nav__link" href="">Новости</a></li>
-								<li class="inform-nav__item"><a class="inform-nav__link" href="">Контакты</a></li>
+								<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias('news') ?>">Новости</a></li>
+								<li class="inform-nav__item"><a class="inform-nav__link" href="<?= $this->alias('contacts') ?>">Контакты</a></li>
 								<li class="inform-nav__tablet-toggle">
 									<svg class="svg-sprite-icon icon-dots inform-nav__tablet-icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#dots"></use>
@@ -80,7 +80,7 @@
 						<div class="header__address header-address">
 							<svg class="svg-sprite-icon icon-location header-address__icon">
 								<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#location"></use>
-							</svg><span class="header-address__text">Москва, пр-т Андропова, 11 к.2 павильон №1/2</span>
+							</svg><span class="header-address__text"><?= $this->set['address'] ?></span>
 						</div>
 						<div class="header__shop">
 							<div class="header-goods"><span class="header-goods__price">0 &#8381;</span><span class="header-goods__count">0 товаров</span></div>
@@ -303,8 +303,8 @@
 							</div>
 							<div class="mobile-menu__footer" style="flex-wrap: wrap;">
 
-								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="tel:84951203034">+7 (495) 120-30-34</a><a class="mobile-menu__phone-link" href="#">Заказать звонок</a></div>
-								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="tel:88007077518">8 (800) 707-75-18</a><span class="mobile-menu__phone-text">Звонок бесплатный </span></div>
+								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="tel:<?= preg_replace('/[^+\d]/', '', $this->set['phone']) ?>"><?= $this->set['phone'] ?></a><!-- <a class="mobile-menu__phone-link" href="#">Заказать звонок</a> --></div>
+								<div class="mobile-menu__phone"><a class="mobile-menu__phone-number" href="mailto:<?= $this->set['email'] ?>"><?= $this->set['email'] ?></a><!-- <span class="mobile-menu__phone-text">Звонок бесплатный </span> --></div>
 
 								<?php if (!empty($this->socials)) : ?>
 

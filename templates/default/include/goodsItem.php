@@ -1,54 +1,19 @@
 <?php if (!empty($data)) : ?>
 
-	<div class="short-item__item">
-		<a class="short-item__fast-view fast-view-ajax" href="item-fast-view.html">Быстрый просмотр</a>
-		<!-- catalog img start -->
-		<div class="short-item__img-link">
-
-			<?php if (!empty($parameters['icon'])) : ?>
-
-				<div class="short-item__lt-info">
-					<?= $parameters['icon'] ?>
-				</div>
-
-			<?php endif; ?>
-
-			<?php if (!empty($data['discount'])) : ?>
-
-				<div class="short-item__lb-info">
-					<span class="short-item__discount">-<?= $data['discount'] ?>%</span>
-				</div>
-
-			<?php endif; ?>
-
-			<div class="short-item__rt-info">
-				<span class="short-item__add-link"></span>
-				<span class="short-item__add-compare"></span>
+	<div class="product-prev">
+		<div class="product-prev__header">
+			<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"><img class="product-prev__img" src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-5.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-6.png" alt="Изображение товара"></a></div>
+		</div>
+		<div class="product-prev__body">
+			<div class="product-prev__info"><span class="product-prev__title"><?= $data['name'] ?></span><span class="product-prev__country"><?= $data['short_content'] ?></span></div>
+			<div class="product-prev__price"><span class="product-prev__price-current"><?= $data['price'] ?> руб.</span>
+				<?= !empty($data['old_price']) ? '<span class="product-prev__price-old">' . $data['old_price'] . ' руб.</span>' : '' ?>
 			</div>
-
-			<a href="#">
-				<img class="short-item__img" src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>">
-			</a>
+			<div class="product-prev__colors"> </div>
 		</div>
-		<!-- catalog img end -->
-
-		<!-- catalog price start -->
-		<div class="short-item__price">
-			<p class="short-item__price-num"><?= $data['price'] ?>руб.</p>
-			<?= !empty($data['old_price']) ? '<s class="short-item__price-s-num">' . $data['old_price'] . ' руб.</s>' : '' ?>
+		<div class="product-prev__footer">
+			<button class="btn">Купить</button>
 		</div>
-		<!-- catalog price end -->
-
-		<!-- catalog item title start-->
-		<div class="short-item__item-title">
-			<a class="short-item__item-link" href="#"><?= $data['name'] ?></a>
-		</div>
-		<!-- catalog item title end-->
-
-
-		<!-- button cart start-->
-		<button class="short-item__add-cart" data-addToCart="<?= $data['id'] ?>" style="border: inherit;">В корзину</button>
-		<!-- button cart end-->
 	</div>
 
 <?php endif; ?>

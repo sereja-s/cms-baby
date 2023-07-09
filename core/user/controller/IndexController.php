@@ -40,23 +40,22 @@ class IndexController extends BaseUser
 		// массив предложений (главная страница) +Выпуск №127
 		$arrHits = [
 
-			'hit' => [
-				'name' => 'Хиты продаж',
-				'icon' => '<span class="short-item__present">Хит</span>'
+			'new' => [
+				'name' => 'Новинки',
+				'show-tab' => 'tab-new'
+			],
+			'sale' => [
+				'name' => 'Распродажа',
+				'show-tab' => 'tab-sale'
 			],
 			'hot' => [
 				'name' => 'Горячие предложения',
-				'icon' => ''
+				'show-tab' => 'tab-hot'
 			],
-			/* 'sale' => [
-				'name' => 'Распродажа',
-				'icon' => '%'
-			], */
-			'new' => [
-				'name' => 'Новинки',
-				'icon' => '<span class="short-item__new">Новинка</span>'
+			'hit' => [
+				'name' => 'Хиты продаж',
+				'show-tab' => 'tab-hit'
 			],
-
 		];
 
 		$goods = [];
@@ -66,7 +65,9 @@ class IndexController extends BaseUser
 
 			$goods[$type] = $this->model->getGoods([
 				'where' => [$type => 1, 'visible' => 1], // +Выпуск №127
-				'limit' => 8 // выводим не более 8 товаров у которых включены соответствующие предложения
+				'order' => ['datetime'],
+				'order_direction' => ['DESC'],
+				'limit' => 7 // выводим не более 8 товаров у которых включены соответствующие предложения
 			]);
 		}
 

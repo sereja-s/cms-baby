@@ -64,542 +64,72 @@
 	<section class="s-hits">
 		<div class="container">
 			<h2 class="title-section">Интернет-магазин детских велосипедов и самокатов</h2>
-			<div class="hits tabs">
-				<div class="mobile-scroll-wrapper">
-					<ul class="tabs-navigation hits-navigation">
-						<li class="hits-navigation__item tabs-navigation__item tabs-navigation__item--active" show-tab="tab-hits">Акции</li>
-						<li class="hits-navigation__item tabs-navigation__item" show-tab="tab-benefits">Выгодно</li>
-						<li class="hits-navigation__item tabs-navigation__item" show-tab="tab-new">Новинки</li>
-					</ul>
-				</div>
-				<div class="tabs__body hits__body">
-					<div class="tab tab--active tab-hits">
-						<div class="products-line-slider">
-							<div class="js-products-line-slider">
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-1.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-5.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-6.png" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Mini Micro 3 в 1 желтый</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span><span class="product-prev__price-old">4 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="product.html" data-color="#fff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#000"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ace147"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Самокат Puky R 07 L AIR (с надувными колесами) белый</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">17 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#30D5C8"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Роликовые коньки Hudora Rollschuh Roller Disco orange, 36(13201)</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">2 990 руб.</span><span class="product-prev__price-old">3 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ace147"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Puky LR M Blue</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">7 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-1.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-5.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-6.png" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Mini Micro 3 в 1 желтый</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span><span class="product-prev__price-old">4 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="product.html" data-color="#fff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#000"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ace147"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Самокат Puky R 07 L AIR (с надувными колесами) белый</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">17 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#30D5C8"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Роликовые коньки Hudora Rollschuh Roller Disco orange, 36(13201)</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">2 990 руб.</span><span class="product-prev__price-old">3 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ace147"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Puky LR M Blue</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">7 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-1.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-5.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-1/img-6.png" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Mini Micro 3 в 1 желтый</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span><span class="product-prev__price-old">4 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="product.html" data-color="#fff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#000"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ace147"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-2/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Самокат Puky R 07 L AIR (с надувными колесами) белый</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">17 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#30D5C8"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-3/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Роликовые коньки Hudora Rollschuh Roller Disco orange, 36(13201)</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">2 990 руб.</span><span class="product-prev__price-old">3 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ace147"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-4/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Puky LR M Blue</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">7 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-							</div>
-							<div class="products-line-slider__navigation">
-								<div class="products-line-slider__btn products-line-slider__btn--prev">
-									<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
-										<use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-								<div class="products-line-slider__dots"></div>
-								<div class="products-line-slider__btn products-line-slider__btn--next">
-									<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
-										<use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
+
+			<?php if (!empty($goods) && !empty($arrHits)) : ?>
+
+				<div class="hits tabs">
+					<div class="mobile-scroll-wrapper">
+						<ul class="tabs-navigation hits-navigation">
+
+							<?php $activeItem = -1 ?>
+
+							<?php foreach ($arrHits as $key => $item) : ?>
+
+								<?php if (!empty($goods[$key])) : ?>
+
+									<li class="hits-navigation__item tabs-navigation__item <?= !++$activeItem ? 'tabs-navigation__item--active' : '' ?>" show-tab="<?= $item['show-tab'] ?>"><?= $item['name'] ?></li>
+
+								<?php endif; ?>
+
+							<?php endforeach; ?>
+
+							<!-- <li class="hits-navigation__item tabs-navigation__item" show-tab="tab-benefits">Выгодно</li>
+							<li class="hits-navigation__item tabs-navigation__item" show-tab="tab-new">Новинки</li> -->
+						</ul>
 					</div>
-					<div class="tab tab-benefits">
-						<div class="products-line-slider">
-							<div class="js-products-line-slider">
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#ace147"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#c9c9c9"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-3.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Трехколесный велосипед Puky Fitsch Red</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span><span class="product-prev__price-old">4 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-3.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Лонгборд HUDORA CruiseStar red - blue</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">2 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="product.html" data-color="#00FF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#c0c0c0"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Puky Pukylino зеленый</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">4 990 руб.</span><span class="product-prev__price-old">5 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
+					<div class="tabs__body hits__body">
+
+						<?php $activeItem = -1 ?>
+
+						<?php foreach ($arrHits as $key => $value) : ?>
+
+							<?php if (!empty($goods[$key])) : ?>
+
+								<div class="tab <?= !++$activeItem ? 'tab--active' : '' ?> <?= $value['show-tab'] ?>">
+									<div class="products-line-slider">
+										<div class="js-products-line-slider">
+
+											<?php foreach ($goods[$key] as $item) {
+
+												$this->showGoods($item);
+											} ?>
+
+										</div>
+										<div class="products-line-slider__navigation">
+											<div class="products-line-slider__btn products-line-slider__btn--prev">
+												<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
+													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+												</svg>
+											</div>
+											<div class="products-line-slider__dots"></div>
+											<div class="products-line-slider__btn products-line-slider__btn--next">
+												<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
+													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+												</svg>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#000"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#CD7F32"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Трехколесный велосипед Puky Ceety CAT S6 Black (2418)</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">8 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#ace147"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#c9c9c9"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-3.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Трехколесный велосипед Puky Fitsch Red</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span><span class="product-prev__price-old">4 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-3.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Лонгборд HUDORA CruiseStar red - blue</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">2 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="product.html" data-color="#00FF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#c0c0c0"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Puky Pukylino зеленый</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">4 990 руб.</span><span class="product-prev__price-old">5 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#000"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#CD7F32"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Трехколесный велосипед Puky Ceety CAT S6 Black (2418)</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">8 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#ace147"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#c9c9c9"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-5/img-3.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Трехколесный велосипед Puky Fitsch Red</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span><span class="product-prev__price-old">4 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-6/img-3.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Лонгборд HUDORA CruiseStar red - blue</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">2 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="product.html" data-color="#00FF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="product.html" data-color="#c0c0c0"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-7/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Puky Pukylino зеленый</span><span class="product-prev__country">Россия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">4 990 руб.</span><span class="product-prev__price-old">5 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#000"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#CD7F32"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-8/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Трехколесный велосипед Puky Ceety CAT S6 Black (2418)</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">8 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-							</div>
-							<div class="products-line-slider__navigation">
-								<div class="products-line-slider__btn products-line-slider__btn--prev">
-									<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
-										<use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-								<div class="products-line-slider__dots"></div>
-								<div class="products-line-slider__btn products-line-slider__btn--next">
-									<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
-										<use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tab tab-new">
-						<div class="products-line-slider">
-							<div class="js-products-line-slider">
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-1.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-5.png" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Micro G-bike+Light Green</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">5 990 руб.</span><span class="product-prev__price-old">6 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-10/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-10/img-2.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Коньки HUDORA rGO зелёные 33-36 45236</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">9 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00BFFF"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Снегокат Stiga Color Pro Blue</span><span class="product-prev__country">Франция</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">7 990 руб.</span><span class="product-prev__price-old">9 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#000"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Самокат-беговел Scoot&Ride 2 in 1 Highwayfreak black Yellow</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-1.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-5.png" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Micro G-bike+Light Green</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">5 990 руб.</span><span class="product-prev__price-old">6 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-10/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-10/img-2.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Коньки HUDORA rGO зелёные 33-36 45236</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">9 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00BFFF"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Снегокат Stiga Color Pro Blue</span><span class="product-prev__country">Франция</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">7 990 руб.</span><span class="product-prev__price-old">9 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#000"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Самокат-беговел Scoot&Ride 2 in 1 Highwayfreak black Yellow</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-1.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-2.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-3.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-4.png" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#FFFF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-9/img-5.png" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Беговел Micro G-bike+Light Green</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">5 990 руб.</span><span class="product-prev__price-old">6 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-10/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-10/img-2.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Коньки HUDORA rGO зелёные 33-36 45236</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">9 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#00BFFF"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#de5216"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#8a2be2"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-11/img-4.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Снегокат Stiga Color Pro Blue</span><span class="product-prev__country">Франция</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">7 990 руб.</span><span class="product-prev__price-old">9 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-								<div class="product-prev">
-									<div class="product-prev__header">
-										<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="#" data-color="#000"><img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-1.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#1089ff"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-2.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#00FF00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-3.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#ff69b4"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-4.jpg" alt="Изображение товара"></a><a class="product-prev__img-wrapper" href="#" data-color="#f00"> <img class="product-prev__img" src="<?= PATH .  TEMPLATE ?>assets/images/content/products/product-12/img-5.jpg" alt="Изображение товара"></a></div>
-									</div>
-									<div class="product-prev__body">
-										<div class="product-prev__info"><span class="product-prev__title">Самокат-беговел Scoot&Ride 2 in 1 Highwayfreak black Yellow</span><span class="product-prev__country">Германия</span></div>
-										<div class="product-prev__price"><span class="product-prev__price-current">3 990 руб.</span></div>
-										<div class="product-prev__colors"> </div>
-									</div>
-									<div class="product-prev__footer">
-										<button class="btn">Купить</button>
-									</div>
-								</div>
-							</div>
-							<div class="products-line-slider__navigation">
-								<div class="products-line-slider__btn products-line-slider__btn--prev">
-									<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
-										<use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-								<div class="products-line-slider__dots"></div>
-								<div class="products-line-slider__btn products-line-slider__btn--next">
-									<svg class="svg-sprite-icon icon-arrow products-line-slider__icon">
-										<use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
+
+							<?php endif; ?>
+
+						<?php endforeach; ?>
+
 					</div>
 				</div>
-			</div>
+
+			<?php endif; ?>
+
 		</div>
 	</section>
 	<section class="s-information s-light-bg">
