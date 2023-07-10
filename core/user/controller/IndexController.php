@@ -36,6 +36,8 @@ class IndexController extends BaseUser
 			'limit' => 5
 		]);
 
+		$aboutUs = $this->model->get('about_us', ['where' => ['visible' => 1],]);
+
 		// Выпуск №126
 		// массив предложений (главная страница) +Выпуск №127
 		$arrHits = [
@@ -77,6 +79,6 @@ class IndexController extends BaseUser
 		//$goods = $this->model->getGoods(['where' => ['parent_id' => 1]]);		
 
 		// собираем переменные в массив и возвращаем в шаблон, что бы они стали доступными при выводе
-		return compact('sales', 'arrHits', 'goods', 'advantages', 'news');
+		return compact('sales', 'arrHits', 'goods', 'advantages', 'news', 'aboutUs');
 	}
 }

@@ -12,7 +12,7 @@
 			<div class="product-prev__colors"> </div>
 		</div>
 		<div class="product-prev__footer">
-			<button class="btn">Купить</button>
+			<button class="btn" data-addToCart="<?= $data['id'] ?>">Купить</button>
 		</div>
 	</div>
 

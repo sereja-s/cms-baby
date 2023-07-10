@@ -85,6 +85,7 @@ class Settings
 		'news' => ['name' => 'Новости'],
 		'information' => ['name' => 'Информация (меню)'],
 		'settings' => ['name' => 'Настройки (о сайте)'],
+		'about_us' => ['name' => 'О НАС'],
 		'advantages' => ['name' => 'Преимущества'],
 		'socials' => ['name' => 'Соц.сети'],
 		'delivery' => ['name' => 'Доставка'],
