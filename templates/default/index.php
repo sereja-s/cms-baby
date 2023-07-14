@@ -37,30 +37,29 @@
 
 	<?php endif; ?>
 
-	<section class="s-advantages">
-		<div class="container">
-			<div class="advantages">
-				<div class="advantage">
-					<svg class="svg-sprite-icon icon-guarantee advantage__icon">
-						<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#guarantee"></use>
-					</svg>
-					<div class="advantage__body"><span class="advantage__title">Гарантия</span><span class="advantage__descr">качества всех товаров</span></div>
-				</div>
-				<div class="advantage">
-					<svg class="svg-sprite-icon icon-delivery advantage__icon">
-						<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#delivery"></use>
-					</svg>
-					<div class="advantage__body"><span class="advantage__title">Доставка</span><span class="advantage__descr">по Москве и области</span></div>
-				</div>
-				<div class="advantage">
-					<svg class="svg-sprite-icon icon-pay advantage__icon">
-						<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#pay"></use>
-					</svg>
-					<div class="advantage__body"><span class="advantage__title">Оплата</span><span class="advantage__descr">онлайн и наличными </span></div>
+	<?php if (!empty($advantages)) : ?>
+
+		<section class="s-advantages">
+			<div class="container">
+				<div class="advantages">
+
+					<?php foreach ($advantages as $item) : ?>
+
+						<div class="advantage">
+							<div class="svg-sprite-icon icon-guarantee advantage__icon">
+								<img src="<?= $this->img($item['img']) ?>"></img>
+							</div>
+							<div class="advantage__body"><span class="advantage__title"><?= $item['name'] ?></span><span class="advantage__descr"><?= $item['short_content'] ?></span></div>
+						</div>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+
+	<?php endif; ?>
+
 	<section class="s-hits">
 		<div class="container">
 			<h2 class="title-section"><?= $this->set['description'] ?></h2>
@@ -135,34 +134,48 @@
 	<section class="s-information s-light-bg">
 		<div class="container">
 			<div class="information">
-				<div class="information-item">
-					<div class="information-item__header">
-						<h2 class="title-section">Новости</h2>
-					</div>
-					<div class="information-item__body">
-						<div class="news-prev__wrapper">
-							<a class="news-prev" href="#">
-								<img src="<?= PATH . TEMPLATE ?>assets/images/content/news/img-1.jpg" class="news-prev__img"></img>
-								<div class="news-prev__body"><span class="news-prev__title">Выставка в Германии</span><span class="news-prev__date">13 июля 2018</span></div>
-							</a><a class="news-prev" href="#">
-								<img src="<?= PATH . TEMPLATE ?>assets/images/content/news/img-2.jpg" class="news-prev__img"></img>
-								<div class="news-prev__body"><span class="news-prev__title">Новинки в нашем магазине</span><span class="news-prev__date">2 июля 2018</span></div>
-							</a>
+
+				<?php if (!empty($news)) : ?>
+
+					<div class="information-item">
+
+						<div class="information-item__header">
+							<h2 class="title-section">Новости</h2>
 						</div>
-					</div>
-					<div class="information-item__footer"><a class="information-item__link" href="#">Все новости</a></div>
-				</div>
-				<div class="information-item">
-					<div class="information-item__header">
-						<h2 class="title-section">Отзывы</h2>
-					</div>
-					<div class="information-item__body">
-						<div class="review-prev">
-							<p class="review-prev__text">Купил у вас в середине лета велосипеды для себя, жены и дочери. Понравился ваш выбор и цены. Мне все велосипеды обошлись не очень дорого. Катаемся на них постоянно, ни один пока что не поломался. И доставка у вас очень быстрая, приятно.</p><span class="review-prev__author">Павел</span>
+						<div class="information-item__body">
+							<div class="news-prev__wrapper">
+
+								<?php foreach ($news as $item) {
+
+									$this->showGoods($item, [], 'newsItem');
+								} ?>
+
+							</div>
 						</div>
+						<div class="information-item__footer"><a class="information-item__link" href="#">Все новости</a></div>
 					</div>
-					<div class="information-item__footer"><a class="information-item__link" href="#">Все отзывы </a></div>
-				</div>
+
+				<?php endif; ?>
+
+				<?php if (!empty($reviews)) : ?>
+
+					<div class="information-item">
+						<div class="information-item__header">
+							<h2 class="title-section">Отзывы</h2>
+						</div>
+						<div class="information-item__body">
+
+							<?php foreach ($reviews as $item) {
+
+								$this->showGoods($item, [], 'reviewsItem');
+							} ?>
+
+						</div>
+						<div class="information-item__footer"><a class="information-item__link" href="#">Все отзывы </a></div>
+					</div>
+
+				<?php endif; ?>
+
 				<!-- <div class="information-item information-item--wide">
 					<div class="information-item__header">
 						<h2 class="title-section">Бренды</h2>

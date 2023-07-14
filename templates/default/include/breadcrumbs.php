@@ -1,11 +1,9 @@
-<section class="breadcrumbps">
+<div class="breadcrumbs">
 	<div class="container">
-		<div class="breadcrumbps__wrapper">
-			<!-- все ссылки а сама страница обычным текстом  -->
-			<a href="<?= $this->alias() ?>">Главная</a> <span>/</span>
-			<a href="<?= $this->alias('catalog') ?>">Каталог</a> <span>/</span>
-			<!-- <a href="#">Крупная бытовая техника</a> <span>/</span> -->
-			<span><?= $data['name'] ?></span>
-		</div>
+		<ul class="breadcrumbs__list">
+			<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная </a></li>
+			<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Каталог </a></li>
+			<li class="breadcrumbs__item"><span class="breadcrumbs__current">Беговелы </span></li>
+		</ul>
 	</div>
-</section>
+</div>

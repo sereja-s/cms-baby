@@ -83,6 +83,7 @@ class Settings
 		'filters' => ['name' => 'Фильтры'],
 		'goodsnew' => ['name' => 'Товары по категориям'],
 		'news' => ['name' => 'Новости'],
+		'reviews' => ['name' => 'Отзывы'],
 		'information' => ['name' => 'Информация (меню)'],
 		'settings' => ['name' => 'Настройки (о сайте)'],
 		'about_us' => ['name' => 'О НАС'],

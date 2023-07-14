@@ -33,7 +33,14 @@ class IndexController extends BaseUser
 			'where' => ['visible' => 1],
 			'order' => ['date'],
 			'order_direction' => ['DESC'],
-			'limit' => 5
+			'limit' => 3
+		]);
+
+		$reviews = $this->model->get('reviews', [
+			'where' => ['visible' => 1],
+			'order' => ['datetime'],
+			'order_direction' => ['DESC'],
+			'limit' => 2
 		]);
 
 		$aboutUs = $this->model->get('about_us', ['where' => ['visible' => 1],]);
@@ -79,6 +86,6 @@ class IndexController extends BaseUser
 		//$goods = $this->model->getGoods(['where' => ['parent_id' => 1]]);		
 
 		// собираем переменные в массив и возвращаем в шаблон, что бы они стали доступными при выводе
-		return compact('sales', 'arrHits', 'goods', 'advantages', 'news', 'aboutUs');
+		return compact('sales', 'arrHits', 'goods', 'advantages', 'news', 'reviews', 'aboutUs');
 	}
 }

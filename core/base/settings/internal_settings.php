@@ -70,7 +70,10 @@ const ADMIN_CSS_JS = [
 const USER_CSS_JS = [
 	// + в файле header.php вместо стилей указать:
 	// <?php $this->getStyles() ?
-	'styles' => [
+	'styles' => [		
+		'assets/css/category-filter-views.min.css',
+		'assets/css/category-filter-views.min.css.map',
+		'assets/css/nouislider.min.css',
 		'assets/css/styles.css',
 	],
 	// + в файле footer.php вместо скриптов указать:
@@ -80,6 +83,7 @@ const USER_CSS_JS = [
 		'assets/js/libs.min.js',
 		'assets/js/main.js',
 		'assets/js/functions.js',
+		'assets/js/nouislider.min.js',
 	]
 ];
 

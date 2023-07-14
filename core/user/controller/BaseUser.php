@@ -143,8 +143,6 @@ abstract class BaseUser extends \core\base\controller\BaseController
 
 		if (!$this->content) {
 
-			//if(!$this->template) { $this->template = ADMIN_TEMPLATE . 'show'; }
-
 			$this->content = $this->render($this->template, $vars);
 		}
 
