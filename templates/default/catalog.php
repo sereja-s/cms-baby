@@ -4,51 +4,6 @@
 
 		<?= $this->breadcrumbs ?>
 
-		<!-- <section class="s-category-slider">
-			<div class="container">
-				<div class="category-slider">
-					<div class="category-slider__header">
-						<div class="category-slider__title">Официальные дилеры Micro, PUKY, Hudora, Globber </div>
-					</div>
-					<div class="category-slider__body">
-						<div class="js-category-slider">
-							<div class="category-slider__item">
-								<svg class="svg-sprite-icon icon-tag category-slider__icon">
-									<use xlink:href="static/images/svg/symbol/sprite.svg#tag"></use>
-								</svg><span class="category-slider__text">Найдете дешевле - мы сделаем скидку</span>
-							</div>
-							<div class="category-slider__item">
-								<svg class="svg-sprite-icon icon-fast-delivery category-slider__icon">
-									<use xlink:href="static/images/svg/symbol/sprite.svg#fast-delivery"></use>
-								</svg><span class="category-slider__text">Доставка по Москве день в день, на следующий день, через день</span>
-							</div>
-							<div class="category-slider__item">
-								<svg class="svg-sprite-icon icon-recommended  category-slider__icon">
-									<use xlink:href="static/images/svg/symbol/sprite.svg#recommended "></use>
-								</svg><span class="category-slider__text">Расширенная европейская гарантия от производителя</span>
-							</div>
-							<div class="category-slider__item">
-								<svg class="svg-sprite-icon icon-medal  category-slider__icon">
-									<use xlink:href="static/images/svg/symbol/sprite.svg#medal "></use>
-								</svg><span class="category-slider__text">Официальный сервисный центр</span>
-							</div>
-							<div class="category-slider__item">
-								<svg class="svg-sprite-icon icon-customer-service category-slider__icon">
-									<use xlink:href="static/images/svg/symbol/sprite.svg#customer-service"></use>
-								</svg><span class="category-slider__text">Профессиональная консультация от продавцов</span>
-							</div>
-							<div class="category-slider__item">
-								<svg class="svg-sprite-icon icon-map category-slider__icon">
-									<use xlink:href="static/images/svg/symbol/sprite.svg#map"></use>
-								</svg><span class="category-slider__text">Доставка по всей России</span>
-							</div>
-						</div>
-					</div>
-					<div class="category-slider__dots"> </div>
-				</div>
-			</div>
-		</section> -->
-
 		<div class="category">
 			<div class="container">
 
@@ -59,224 +14,137 @@
 				<?php else : ?>
 
 					<div class="category__header">
-						<h2 class="title-page"><?= $data['name'] ?></h2>
-						<div class="filter-mobile__toggle"><span>Фильтры</span>
-							<svg class="svg-sprite-icon icon-arrow filter-mobile__toggle-icon">
-								<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-							</svg>
-						</div>
-						<div class="category__sort">
-							<div class="select">
-								<div class="select__header select__header--multi"><span class="select__description">Сортировать по:</span><span class="select__current">популярности</span>
-									<svg class="svg-sprite-icon icon-arrow select__icon">
-										<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-									</svg>
-								</div>
-								<div class="select__body">
-									<ul class="select-list">
-										<li class="select-list__item">цене </li>
-										<li class="select-list__item">рейтингу </li>
-										<li class="select-list__item">популярности </li>
-									</ul>
+
+						<?php if (!empty($catalogFilters) || !empty($catalogPrices)) : ?>
+
+							<h2 class="title-page"><?= $data['name'] ?></h2>
+							<div class="filter-mobile__toggle"><span>Фильтры</span>
+								<svg class="svg-sprite-icon icon-arrow filter-mobile__toggle-icon">
+									<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+								</svg>
+							</div>
+							<div class="category__sort">
+								<div class="select">
+									<div class="select__header select__header--multi"><span class="select__description">Сортировать по:</span><span class="select__current">популярности</span>
+										<svg class="svg-sprite-icon icon-arrow select__icon">
+											<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="select__body">
+										<ul class="select-list">
+											<li class="select-list__item">цене </li>
+											<li class="select-list__item">рейтингу </li>
+											<li class="select-list__item">популярности </li>
+										</ul>
+									</div>
 								</div>
 							</div>
-						</div>
+
+						<?php endif; ?>
+
 					</div>
 					<div class="category__body">
+
 						<aside class="filter category__filter">
-							<div class="filter-mobile__close">
-								<img src="<?= PATH . TEMPLATE ?>assets/images/icons8-закрыть-64.png" class="filter-mobile__close-icon"></img>
-							</div>
-							<div class="filter__body">
 
-								<div class="category-filter">
+							<?php if (!empty($catalogFilters) || !empty($catalogPrices)) : ?>
 
-									<?php if (!empty($catalogPrices)) : ?>
-
-										<h4 class="category-filter__title category-filter__title" style="padding:10px 10px 50px 5px; color: #ff6d00; font-weight: 700;">Цена</h4>
-										<div class="section-filter__body" style="padding-bottom: 35px;">
-											<div class="filters-price__slider" id="range-slider" style="margin-left: 5px;"></div>
-											<div class="filters-price__inputs">
-												<label class="filters-price__label">
-													<span class="filters-price__text">от</span>
-													<input type="text" name="min_price" value="<?= $catalogPrices['min_price'] ?>" class="filters-price__input" id="input-0">
-													<span class="filters-price__text">₽</span>
-												</label>
-												<label class="filters-price__label">
-													<span class="filters-price__text">до</span>
-													<input type="text" name="max_price" value="<?= $catalogPrices['max_price'] ?>" class="filters-price__input" id="input-1">
-													<span class="filters-price__text">₽</span>
-												</label>
-											</div>
-										</div>
-
-									<?php endif; ?>
-
+								<div class="filter-mobile__close">
+									<img src="<?= PATH . TEMPLATE ?>assets/images/icons8-закрыть-64.png" class="filter-mobile__close-icon"></img>
 								</div>
 
-								<div class="filter__block"><span class="filter__title">Подбор параметров </span>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Пол</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
+
+								<form action="<?= $this->alias('catalog' . (!empty($this->parameters['alias']) ? '/' . $this->parameters['alias'] : '')) ?>" class="filter__body">
+
+									<div class="category-filter _spollers">
+
+										<?php if (!empty($catalogPrices)) : ?>
+
+											<h4 class="category-filter__title category-filter__title" style="padding:10px 10px 50px 5px; color: #ff6d00; font-weight: 700;">Цена</h4>
+											<div class="section-filter__body" style="padding-bottom: 35px;">
+												<div class="filters-price__slider" id="range-slider" style="margin-left: 5px;"></div>
+												<div class="filters-price__inputs">
+													<label class="filters-price__label">
+														<span class="filters-price__text">от</span>
+														<input type="text" name="min_price" value="<?= $catalogPrices['min_price'] ?>" class="filters-price__input" id="input-0">
+														<span class="filters-price__text">₽</span>
+													</label>
+													<label class="filters-price__label">
+														<span class="filters-price__text">до</span>
+														<input type="text" name="max_price" value="<?= $catalogPrices['max_price'] ?>" class="filters-price__input" id="input-1">
+														<span class="filters-price__text">₽</span>
+													</label>
+												</div>
 											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
+
+										<?php endif; ?>
+
+
+
+										<?php if (!empty($catalogFilters)) : ?>
+
+											<div class="filter__block"><span class="filter__title">Подбор параметров </span>
+
+												<?php foreach ($catalogFilters as $item) : ?>
+
+													<div class="filter__row">
+														<div class="select">
+															<div class="select__header _spoller"><?= $item['name'] ?>
+																<svg class="svg-sprite-icon icon-arrow select__icon">
+																	<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+																</svg>
+															</div>
+															<div class="select__body">
+
+																<?php foreach ($item['values'] as $value) : ?>
+
+																	<div class="select-list__item--mod"><input type="checkbox" name="filters[]" value="<?= $value['id'] ?>" <?= !empty($_GET['filters']) && in_array($value['id'], $_GET['filters']) ? 'checked' : '' ?>>&nbsp<?= $value['name'] ?>&nbsp(<?= $value['count'] ?? 0 ?>)</div>
+
+																<?php endforeach; ?>
+
+															</div>
+														</div>
+													</div>
+
+												<?php endforeach; ?>
+
+												<!-- <div class="filter__row">
+													<div class="filter-color"><span class="filter__label">Цвет</span>
+														<ul class="color-list">
+															<li class="color-list__item" style="background-color:#000000"></li>
+															<li class="color-list__item" style="background-color:#666666"></li>
+															<li class="color-list__item color-list__item--white" style="background-color:#ffffff"></li>
+															<li class="color-list__item" style="background-color:#84d6ff"></li>
+															<li class="color-list__item" style="background-color:#3333ff"></li>
+															<li class="color-list__item" style="background-color:#666666"></li>
+															<li class="color-list__item" style="background-color:#ff0500"></li>
+															<li class="color-list__item" style="background-color:#ff6500"></li>
+															<li class="color-list__item" style="background-color:#663300"></li>
+															<li class="color-list__item" style="background-color:#ffd701"></li>
+															<li class="color-list__item" style="background-color:#009900"></li>
+															<li class="color-list__item" style="background-color:#99ff9a"></li>
+															<li class="color-list__item" style="background-color:#30d5c8"></li>
+															<li class="color-list__item" style="background-color:#103090"></li>
+														</ul>
+													</div>
+												</div> -->
+
+												<div class="filter__buttons">
+													<button class="btn btn--transparent-gray">Сброс</button>
+													<button class="btn btn--bg-orange">Подбор</button>
+												</div>
 											</div>
-										</div>
+
 									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Производитель</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Вес,кг</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Дополнительные свойства</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Возраст</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Особенности</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Количество колес</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="filter-color"><span class="filter__label">Цвет</span>
-											<ul class="color-list">
-												<li class="color-list__item" style="background-color:#000000"></li>
-												<li class="color-list__item" style="background-color:#666666"></li>
-												<li class="color-list__item color-list__item--white" style="background-color:#ffffff"></li>
-												<li class="color-list__item" style="background-color:#84d6ff"></li>
-												<li class="color-list__item" style="background-color:#3333ff"></li>
-												<li class="color-list__item" style="background-color:#666666"></li>
-												<li class="color-list__item" style="background-color:#ff0500"></li>
-												<li class="color-list__item" style="background-color:#ff6500"></li>
-												<li class="color-list__item" style="background-color:#663300"></li>
-												<li class="color-list__item" style="background-color:#ffd701"></li>
-												<li class="color-list__item" style="background-color:#009900"></li>
-												<li class="color-list__item" style="background-color:#99ff9a"></li>
-												<li class="color-list__item" style="background-color:#30d5c8"></li>
-												<li class="color-list__item" style="background-color:#103090"></li>
-											</ul>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Тип колес</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__row">
-										<div class="select">
-											<div class="select__header"><span class="select__current">Макс.выдерживаемый вес</span>
-												<svg class="svg-sprite-icon icon-arrow select__icon">
-													<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-												</svg>
-											</div>
-											<div class="select__body">
-												<ul class="select-list">
-													<li class="select-list__item">Мужской </li>
-													<li class="select-list__item">Женский </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="filter__buttons">
-										<button class="btn btn--transparent-gray">Сброс</button>
-										<button class="btn btn--bg-orange">Подбор</button>
-									</div>
-								</div>
-							</div>
+
+								<?php endif; ?>
+
+								</form>
+
+							<?php endif; ?>
+
 						</aside>
+
 						<main class="category-main">
 							<div class="products-prev__wrapper products-prev__wrapper--small">
 
@@ -286,6 +154,7 @@
 								} ?>
 
 							</div>
+
 							<div class="pagination__wrapper">
 								<div class="pagination"><a class="pagination__btn pagination__btn--prev" href="#">
 										<svg class="svg-sprite-icon icon-arrow pagination__icon">

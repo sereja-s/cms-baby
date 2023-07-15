@@ -2201,8 +2201,11 @@ footer {
 .select.select--open .select__body {
 	display: block;
 }
-
 .select.select--open .select__icon {
+	transform: rotate(270deg);
+}
+
+.select__header._active .select__icon {
 	-webkit-transform: rotate(270deg);
 	-ms-transform: rotate(270deg);
 	transform: rotate(270deg);
@@ -2215,11 +2218,17 @@ footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	height: 40px;
+	min-height: 40px;
 	border: 1px solid #dddddd;
 	border-radius: 2px;
-	padding: 0 10px;
+	padding: 5px;
 }
+
+@media screen and (max-width: 767px) {
+	.select__header {
+		flex-direction: column;		
+	}
+	}
 
 .select__header>* {
 	margin-right: 10px;
@@ -2234,8 +2243,14 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+	.select__current {
+		padding-top: 7px;
+	}
+}
+
+@media screen and (max-width: 767px) {
 	.select__description {
-		display: none;
+		padding-bottom: 5px;
 	}
 }
 
@@ -2263,13 +2278,23 @@ footer {
 	z-index: 1;
 }
 
-.select-list__item {
+.select-list__item{
 	height: 40px;
 	line-height: 40px;
 	padding: 0 10px;
 }
 
 .select-list__item:hover {
+	background-color: #eef2f4;
+}
+
+.select-list__item--mod {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+}
+
+.select-list__item--mod:hover {
 	background-color: #eef2f4;
 }
 

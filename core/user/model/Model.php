@@ -131,6 +131,7 @@ class Model extends \core\base\model\BaseModel
 				// формируем запрос для получения фильтров
 				$filters = $this->get('filters', [
 					'where' => $filtersWhere,
+					'order' => $filtersOrder,
 					'join' => [
 						// соединяем таблицу с самой собой
 						'filters f_name' => [
