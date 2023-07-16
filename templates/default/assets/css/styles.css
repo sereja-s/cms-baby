@@ -2226,9 +2226,10 @@ footer {
 
 @media screen and (max-width: 767px) {
 	.select__header {
-		flex-direction: column;		
+		flex-direction: column;
+		min-width: 50px;		
 	}
-	}
+}
 
 .select__header>* {
 	margin-right: 10px;
@@ -2282,6 +2283,11 @@ footer {
 	height: 40px;
 	line-height: 40px;
 	padding: 0 10px;
+}
+
+.select-list__item.order-desc{
+	color: #f77f00;
+	font-weight: 700;
 }
 
 .select-list__item:hover {

@@ -3,6 +3,7 @@
 <footer class="footer">
 	<div class="footer__main">
 		<div class="container">
+
 			<div class="footer__navigation">
 
 				<?php if (!empty($this->category)) : ?>
@@ -10,15 +11,17 @@
 					<div class="footer__item">
 						<ul class="footer-nav">
 
-							<li class="footer-nav__item"><a class="footer-nav__link" href="<?= $this->alias('catalog') ?>">Все товары</a></li>
-
-							<?php foreach ($this->recurseAllSort($this->category) as $item) : ?>
-
-								<li class="footer-nav__item"><a class="footer-nav__link" href="<?= $this->alias(['catalog' => $item['alias']]) ?>"><?= $item['name'] ?></a></li>
-
-							<?php endforeach; ?>
+							<li class="footer-nav__item" style="padding-bottom: 15px;"><a class="footer-nav__link" href="<?= $this->alias('catalog') ?>">Все товары</a></li>
 
 						</ul>
+
+						<div class="footer__address" style="display: flex;">
+
+							<svg class="svg-sprite-icon icon-location header-address__icon">
+								<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#location"></use>
+							</svg><span class="footer-address__text"><?= $this->set['address'] ?></span>
+
+						</div>
 					</div>
 
 				<?php endif; ?>
@@ -47,14 +50,6 @@
 						<li class="footer-nav__item"><a class="footer-nav__link" href="">Карта сайта</a></li>
 					</ul>
 
-					<div class="footer__address" style="display: flex;">
-
-						<svg class="svg-sprite-icon icon-location header-address__icon">
-							<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#location"></use>
-						</svg><span class="footer-address__text"><?= $this->set['address'] ?></span>
-
-					</div>
-
 				</div>
 			</div>
 			<div class="footer__contacts">
@@ -63,9 +58,9 @@
 			<div class="footer__contacts-mobile">
 				<div class="footer__item"><a class="footer__phone" href="tel:8<?= preg_replace('/[^+\d]/', '', $this->set['phone']) ?>"><?= $this->set['phone'] ?></a><!-- <span class="footer__text">Звонок бесплатный</span> --></div>
 				<div class="footer__item"><!-- <span class="footer__text">+7 (495) 120-30-34</span> --><a class="footer__mail" href="mailto:<?= $this->set['email'] ?>"><?= $this->set['email'] ?></a></div>
-				<div class="footer__item footer__item--full">
+				<!-- <div class="footer__item footer__item--full">
 					<div class="yandex-market"><img src="<?= PATH .  TEMPLATE ?>assets/images/general/yandex.svg" alt="Yandex-market"><a class="btn btn--small btn--transparent-gray" href="#">Оставить отзыв </a></div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -87,7 +82,7 @@
 
 			<?php endif; ?>
 
-			<div class="yandex-market"><img src="<?= PATH .  TEMPLATE ?>assets/images/general/yandex.svg" alt="Yandex-market"><a class="btn btn--small btn--transparent-gray" href="#">Оставить отзыв </a></div>
+			<!-- <div class="yandex-market"><img src="<?= PATH .  TEMPLATE ?>assets/images/general/yandex.svg" alt="Yandex-market"><a class="btn btn--small btn--transparent-gray" href="#">Оставить отзыв </a></div> -->
 		</div>
 	</div>
 

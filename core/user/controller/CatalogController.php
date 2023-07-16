@@ -47,7 +47,7 @@ class CatalogController extends BaseUser
 
 		if (!empty($data) && is_array($data)) {
 
-			if (count(($data)) >= 2) {
+			if (count($data) >= 2) {
 
 				foreach ($data as $item) {
 
@@ -102,9 +102,7 @@ class CatalogController extends BaseUser
 			]
 		], $catalogFilters, $catalogPrices);
 
-		//$a = 1;
-
-		// Выпуск №136
+		// +Выпуск №136
 		$pages = $this->model->getPagination();
 
 		return compact('data', 'catalogFilters', 'catalogPrices', 'goods', 'order', 'quantities', 'pages');
@@ -132,6 +130,7 @@ class CatalogController extends BaseUser
 		// если в сортировщик что то пришло
 		if (!empty($_GET['order'])) {
 
+			// preg_split() — Разбивает строку по регулярному выражению
 			$orderArr = preg_split('/_+/', $_GET['order'], 0, PREG_SPLIT_NO_EMPTY);
 
 			if (!empty($this->model->showColumns('goodsnew')[$orderArr[0]])) {
@@ -143,6 +142,7 @@ class CatalogController extends BaseUser
 				// здесь надо понять какая сортировка сейчас выбрана пользователем
 				foreach ($order as $key => $item) {
 
+					// strpos() - Ищет позицию первого вхождения подстроки needle в строку haystack 
 					if (strpos($item, $orderDb['order']) === 0) {
 
 						$direction = $orderDb['order_direction'] === 'asc' ? 'desc' : 'asc';
@@ -185,7 +185,7 @@ class CatalogController extends BaseUser
 		}
 
 
-		// Выпуск №133 Пользовательская часть | система перекрестных фильтров
+		// +Выпуск №133 Пользовательская часть | система перекрестных фильтров
 		if (!empty($_GET['filters']) && is_array($_GET['filters'])) {
 
 
@@ -239,7 +239,7 @@ class CatalogController extends BaseUser
 					'operand' => ['IN'],
 					'fields' => ['id'],
 					// укажем по какому критерию: id из предыдущей таблицы (здесь- filters) смотрит на parent_id из текущей 
-					// (здесь таже ,но с псевдонимом: filters f_val)
+					// (здесь также- filters ,но с псевдонимом, т.е. filters f_val)
 					'on' => ['id', 'parent_id']
 				]
 			],
@@ -261,8 +261,7 @@ class CatalogController extends BaseUser
 
 				if (isset($item['join']['f_val'])) {
 
-					// получим массивы в которых будут разложены id значений, которые были отмечены пользователем (для 
-					// каждого фильтра, содеращего выбранный значения)
+					// получим массивы для каждого фильтра в которых будут разложены id значений фильтра, которые были отмечены пользователем
 					$arr[$c] = array_column($item['join']['f_val'], 'id');
 
 					$c++;
@@ -304,7 +303,7 @@ class CatalogController extends BaseUser
 		// если пришёл в массиве только один элемент (массив)
 		if (count($arr) === 1) {
 
-			// разделим этот массив, по-элементно и вернём эти элементы
+			// разделим этот массив, по-элементно и вернём эти элементы (здесь- по 1-му)
 			return array_chunk(array_shift($arr), 1);
 		}
 

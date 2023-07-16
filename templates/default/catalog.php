@@ -9,7 +9,7 @@
 
 				<?php if (empty($goods)) : ?>
 
-					<h3>по Вашему запросу ничего не найдено</h3>
+					<h3 style="padding-bottom: 25px;">по Вашему запросу ничего не найдено</h3>
 
 				<?php else : ?>
 
@@ -25,24 +25,45 @@
 							</div>
 							<div class="category__sort">
 								<div class="select">
-									<div class="select__header select__header--multi"><span class="select__description">Сортировать по:</span><span class="select__current">популярности</span>
-										<svg class="svg-sprite-icon icon-arrow select__icon">
-											<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
-										</svg>
-									</div>
-									<div class="select__body">
-										<ul class="select-list">
-											<li class="select-list__item">цене </li>
-											<li class="select-list__item">рейтингу </li>
-											<li class="select-list__item">популярности </li>
-										</ul>
-									</div>
+
+									<?php if (!empty($order)) : ?>
+
+										<div class="select__header select__header--multi"><span class="select__description">Сортировать по:</span><span class="select__current"></span>
+											<svg class="svg-sprite-icon icon-arrow select__icon">
+												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+											</svg>
+										</div>
+										<div class="select__body">
+
+											<div class="select-list">
+
+												<?php
+
+												$GET = $_GET ?? [];
+
+												?>
+
+												<?php foreach ($order as $name => $item) : ?>
+
+													<a href="<?= $this->alias('catalog/' .  ($this->parameters['alias'] ?? ''), array_merge($GET, ['order' => $item])) ?>" class="select-list__item <?= preg_match('/_desc$/', $item) ? 'order-desc' : '' ?>">
+														<?= $name ?>
+													</a>
+
+												<?php endforeach; ?>
+
+											</div>
+
+										</div>
+
+									<?php endif; ?>
+
 								</div>
 							</div>
 
 						<?php endif; ?>
 
 					</div>
+
 					<div class="category__body">
 
 						<aside class="filter category__filter">
@@ -79,8 +100,6 @@
 
 										<?php endif; ?>
 
-
-
 										<?php if (!empty($catalogFilters)) : ?>
 
 											<div class="filter__block"><span class="filter__title">Подбор параметров </span>
@@ -108,38 +127,20 @@
 
 												<?php endforeach; ?>
 
-												<!-- <div class="filter__row">
-													<div class="filter-color"><span class="filter__label">Цвет</span>
-														<ul class="color-list">
-															<li class="color-list__item" style="background-color:#000000"></li>
-															<li class="color-list__item" style="background-color:#666666"></li>
-															<li class="color-list__item color-list__item--white" style="background-color:#ffffff"></li>
-															<li class="color-list__item" style="background-color:#84d6ff"></li>
-															<li class="color-list__item" style="background-color:#3333ff"></li>
-															<li class="color-list__item" style="background-color:#666666"></li>
-															<li class="color-list__item" style="background-color:#ff0500"></li>
-															<li class="color-list__item" style="background-color:#ff6500"></li>
-															<li class="color-list__item" style="background-color:#663300"></li>
-															<li class="color-list__item" style="background-color:#ffd701"></li>
-															<li class="color-list__item" style="background-color:#009900"></li>
-															<li class="color-list__item" style="background-color:#99ff9a"></li>
-															<li class="color-list__item" style="background-color:#30d5c8"></li>
-															<li class="color-list__item" style="background-color:#103090"></li>
-														</ul>
-													</div>
-												</div> -->
-
 												<div class="filter__buttons">
-													<button class="btn btn--transparent-gray">Сброс</button>
+
 													<button class="btn btn--bg-orange">Подбор</button>
 												</div>
+
 											</div>
+
+										<?php endif; ?>
 
 									</div>
 
-								<?php endif; ?>
-
 								</form>
+
+								<button class="btn btn--transparent-gray" style="margin-top: 5px;" onclick="location.href = location.pathname">Сброс</button>
 
 							<?php endif; ?>
 
@@ -158,7 +159,7 @@
 							<div class="pagination__wrapper">
 								<div class="pagination"><a class="pagination__btn pagination__btn--prev" href="#">
 										<svg class="svg-sprite-icon icon-arrow pagination__icon">
-											<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
+											<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
 										</svg></a>
 									<ul class="pagination__list">
 										<li class="pagination__item pagination__item--active"><a class="pagination__link" href="#">1</a></li>
@@ -168,35 +169,42 @@
 										<li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
 									</ul><a class="pagination__btn" href="#">
 										<svg class="svg-sprite-icon icon-arrow pagination__icon">
-											<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
+											<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
 										</svg></a>
 								</div>
-								<div class="pagination__count"><span class="pagination__text">Выводить по:</span>
-									<div class="select">
-										<div class="select__header"><span class="select__current">12</span>
-											<svg class="svg-sprite-icon icon-arrow select__icon">
-												<use xlink:href="static/images/svg/symbol/sprite.svg#arrow"></use>
-											</svg>
-										</div>
-										<div class="select__body">
-											<ul class="select-list">
-												<li class="select-list__item">24 </li>
-												<li class="select-list__item">36 </li>
-											</ul>
+
+								<?php if (!empty($quantities)) : ?>
+
+									<div class="pagination__count">
+										<h4 class="pagination__text">Показывать по:</h4>
+										<div class="select">
+											<div class="select__header"><span class="select__current"><?= $_SESSION['quantities'] ?? QTY ?></span>
+												<svg class="svg-sprite-icon icon-arrow select__icon">
+													<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+												</svg>
+											</div>
+											<div class="select__body">
+												<ul class="select-list qtyitems">
+
+													<?php foreach ($quantities as $item) : ?>
+
+														<li class="select-list__item"><?= $item ?></li>
+
+													<?php endforeach; ?>
+
+												</ul>
+											</div>
 										</div>
 									</div>
-								</div>
+
+								<?php endif; ?>
+
 							</div>
 							<section class="s-content">
 								<div class="content-block">
-									<p class="text-attention">Беговел или безпедальный велосипед - это одно из популярнейших транспортных средств для детей. В нашем интернет-магазине "Baby-Toys" представлены в широком ассортименте велобеги для детей от 1 года. Это новое но уже завоевавшее большую популярность транспортное средство для детей. Малыши, освоившие езду на беговеле без проблем, пересаживаются на двухколосные велосипеды, минуя сложную стадию обучения с неизбежными падениями. Вся продукция магазина сертифицированная и разрешена для использования маленькими детьми.</p>
-									<h3 class="title-block">Беговелы для детей</h3>
-									<p class="text">Конструкция очень схожа на обыкновенный двухколесный велосипед без педалей. Управление происходит при помощи руля. Купить велобег можно малышу, которому уже исполнился 1 год. Основным елементом велобега является рама, которая очень похожа на велосипедную. она может быть из металла или пластика.</p>
-									<p class="text">К раме часто крепят ручной тормоз. Однако существуют модели и без тормозов. Беговел может иметь подставку для ног и упор. Руль и сиденье регулируемые. Таким образом, одного беговела вполне хватит на 1-3 года. После чего ребенок сможет пересесть на двухколесный велосипед.</p>
-									<p class="text">Одним из преимуществ подобной конструкции является то, что скорость езды ребенок может устанавливать по своему усмотрению. Ситуация, когда разогнавшись на беговеле малыш не сможет остановится, полностью исключена. Для того чтобы затормозить нужно просто уперется ногами в землю или воспользоватся ручным тормозом. Оба варианта достаточно надежны. Падение детей с велобегов случаются крайне редко.</p>
-									<h3 class="title-block">Купить велобег в Москве</h3>
-									<p class="text">Купить беговел можно в нашем интернет-магазине. Это обойдется недорого. В ассортименте есть большое количество моделей от известных производителей. Все товары соответствуют европейским стандартам безопасности.</p>
-									<p class="text">Интернет-магазин обслуживает покупателей из всех районов России. Можно покупать товар партиями или поштучно. Доставка осуществляется в кротчайшие срокине зависимо от количества приобретаемого товара. В случае необходимости магазин оказывает бесплатные консультации.</p>
+									<p class="text-attention"><?= ($data['name'] !== 'Каталог') ? $data['name'] : $this->set['keywords'] ?> в Донецке - есть в нашем магазине по адресу: <?= $this->set['address'] ?>. Сделать заказ можно на этом сайте. Цены доступные. В ассортименте есть большое количество моделей от известных производителей. Все товары соответствуют европейским стандартам. Есть возможность доставки по Донецку и прилегающей территории</p>
+									<!-- <h3 class="title-block">Беговелы для детей</h3> -->
+									<p class="text"> Вся информация на сайте о товарах носит справочный характер и не является публичной офертой в соответствии с пунктом 2 статьи 437 ГК РФ. Убедительно просим Вас при покупке уточнять наличие желаемых функций и характеристик у нашего сотрудника по тел. <?= $this->set['phone'] ?>. После оформления заказа, мы свяжемся с вами для уточнения деталей заказа. Предложение по продаже товара действительно в течение срока наличия этого товара на складе. </p>
 								</div>
 							</section>
 						</main>

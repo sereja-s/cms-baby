@@ -156,7 +156,7 @@ class Model extends \core\base\model\BaseModel
 								'goodsnew_id' => $this->get('goodsnew', [
 									'fields' => [$this->showColumns('goodsnew')['id_row']],
 									'where' => $set['where'] ?? null,
-									// Выпуск №132
+									// +Выпуск №132
 									'operand' => $set['operand'] ?? null,
 									'return_query' => true
 								])

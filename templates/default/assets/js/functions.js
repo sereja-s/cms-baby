@@ -67,8 +67,6 @@ let _slideToggle = (target, duration = 500) => {
 // Spollers-----------------------------------------------------------------------------------------------------------//
 let spollers = document.querySelectorAll("._spoller");
 
-//debugger;
-
 let spollersGo = true;
 if (spollers.length > 0) {
 
@@ -544,7 +542,7 @@ function phoneValidate(item) {
 }
 
 //================================== поиск по каталогу ================================================================//
-/* menuSearch();
+menuSearch();
 
 function menuSearch() {
 
@@ -579,7 +577,7 @@ function menuSearch() {
 		searchBtn.classList.remove('vg-search-reverse');
 	});
 
-} */
+}
 
 
 // в переменную сохраним самовызывающуюся функцию, внутри которой будет реализовано замыкание (для работы с

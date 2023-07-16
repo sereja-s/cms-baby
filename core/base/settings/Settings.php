@@ -194,7 +194,7 @@ class Settings
 		'discount' => ['int' => true],
 		'login' => ['empty' => true, 'trim' => true],
 		'password' => ['crypt' => true, 'empty' => true],
-		'keywords' => ['count' => 70, 'trim' => true],
+		'keywords' => ['count' => 170, 'trim' => true],
 		'description' => ['count' => 160, 'trim' => true]
 	];
 

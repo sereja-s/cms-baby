@@ -76,7 +76,7 @@ class RouteController extends BaseController
 			// т.е. в переменную $url попадает полный маршрут (-Выпуск №130)
 			/* $url = explode('/', substr($adress_str, strlen(PATH))); */
 
-			// Выпуск №130
+			// +Выпуск №130
 			$url = preg_split('/(\/)|(\?.*)/', $adress_str, 0, PREG_SPLIT_NO_EMPTY);
 
 
@@ -153,7 +153,7 @@ class RouteController extends BaseController
 				}
 			} else {
 
-				// убедимся, что отправлен не Post-запрос (выпуск № 130 (отправка формы фильтров товара))
+				// убедимся, что отправлен не Post-запрос (+Выпуск № 130 (отправка формы фильтров товара))
 				if (!$this->isPost()) {
 
 					$pattern = '';
