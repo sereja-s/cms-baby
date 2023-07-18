@@ -70,7 +70,8 @@ const ADMIN_CSS_JS = [
 const USER_CSS_JS = [
 	// + в файле header.php вместо стилей указать:
 	// <?php $this->getStyles() ?
-	'styles' => [		
+	'styles' => [
+		'https://use.fontawesome.com/releases/v5.7.2/css/all.css',
 		'assets/css/category-filter-views.min.css',
 		'assets/css/category-filter-views.min.css.map',
 		'assets/css/nouislider.min.css',

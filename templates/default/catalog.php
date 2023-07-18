@@ -156,22 +156,41 @@
 
 							</div>
 
+
+
 							<div class="pagination__wrapper">
-								<div class="pagination"><a class="pagination__btn pagination__btn--prev" href="#">
-										<svg class="svg-sprite-icon icon-arrow pagination__icon">
-											<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
-										</svg></a>
-									<ul class="pagination__list">
-										<li class="pagination__item pagination__item--active"><a class="pagination__link" href="#">1</a></li>
-										<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-										<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-										<li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-										<li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-									</ul><a class="pagination__btn" href="#">
-										<svg class="svg-sprite-icon icon-arrow pagination__icon">
-											<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
-										</svg></a>
+
+
+
+								<div class="pagination">
+
+									<?php if (!empty($pages)) : ?>
+
+										<?php $this->pagination($pages) ?>
+
+										<!-- <a class="pagination__btn pagination__btn--prev" href="#">
+											<svg class="svg-sprite-icon icon-arrow pagination__icon">
+												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+											</svg>
+										</a>
+										<ul class="pagination__list">
+											<li class="pagination__item pagination__item--active"><a class="pagination__link" href="#">1</a></li>
+											<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+											<li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+											<li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+											<li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+										</ul>
+										<a class="pagination__btn" href="#">
+											<svg class="svg-sprite-icon icon-arrow pagination__icon">
+												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#arrow"></use>
+											</svg>
+										</a> -->
+
+									<?php endif; ?>
+
 								</div>
+
+
 
 								<?php if (!empty($quantities)) : ?>
 
@@ -200,6 +219,9 @@
 								<?php endif; ?>
 
 							</div>
+
+
+
 							<section class="s-content">
 								<div class="content-block">
 									<p class="text-attention"><?= ($data['name'] !== 'Каталог') ? $data['name'] : $this->set['keywords'] ?> в Донецке - есть в нашем магазине по адресу: <?= $this->set['address'] ?>. Сделать заказ можно на этом сайте. Цены доступные. В ассортименте есть большое количество моделей от известных производителей. Все товары соответствуют европейским стандартам. Есть возможность доставки по Донецку и прилегающей территории</p>

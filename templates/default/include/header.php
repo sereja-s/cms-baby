@@ -74,7 +74,7 @@
 					<div class="header__content">
 						<a href="<?= $this->alias() ?>" class="header__logo logo"><img class="logo__img" src="<?= $this->img($this->set['img']) ?>" alt="<?= $this->set['name'] ?>"></a>
 						<div class="header__phones">
-							<div class="header__item header__item--mobile"><a class="header__phone" href="tel:<?= preg_replace('/[^+\d]/', '', $this->set['phone']) ?>"><?= $this->set['phone'] ?></a><a class="header__link" href="">Заказать звонок</a></div>
+							<div class="header__item header__item--mobile"><a class="header__phone" href="tel:<?= preg_replace('/[^+\d]/', '', $this->set['phone']) ?>"><?= $this->set['phone'] ?></a><!-- <a class="header__link" href="">Заказать звонок</a> --></div>
 							<div class="header__item"><a class="header__phone" href="mailto:<?= $this->set['email'] ?>"><?= $this->set['email'] ?></a><span class="header__description"></span></div>
 						</div>
 						<div class="header__address header-address">

@@ -386,21 +386,22 @@ abstract class BaseUser extends \core\base\controller\BaseController
 
 		if (!empty($pages['first'])) {
 
-			echo <<<HEREDOC
-			<a href="$firstPageStr" class="catalog-section-pagination__item">
-									<< </a>
-			HEREDOC;
-		}
-
-
-		if (!empty($pages['back'])) {
+			$path = PATH . TEMPLATE;
 
 			echo <<<HEREDOC
-			<a href="$backPageStr" class="catalog-section-pagination__item">
-									< </a>
-			HEREDOC;
+			<a href="$firstPageStr" class="pagination__btn pagination__btn--prev">
+											<svg class="svg-sprite-icon icon-arrow pagination__icon">
+												<use xlink:href="{$path}assets/images/svg/symbol/sprite.svg#arrow"></use>
+											</svg>
+			</a>			
+HEREDOC;
 		}
 
+		echo <<<HEREDOC
+
+		<ul class="pagination__list">										
+
+HEREDOC;
 
 		if (!empty($pages['previous'])) {
 
@@ -409,22 +410,18 @@ abstract class BaseUser extends \core\base\controller\BaseController
 				$href = $item === 1 ? $basePageStr : $str . $item;
 
 				echo <<<HEREDOC
-				<a href="$href" class="catalog-section-pagination__item">
-									$item
-								</a>
-				HEREDOC;
+		<li class="pagination__item"><a class="pagination__link" href="$href">$item</a></li>
+		
+HEREDOC;
 			}
 		}
-
 
 		if (!empty($pages['current'])) {
 
 			echo <<<HEREDOC
-			<a href="" class="catalog-section-pagination__item pagination-current">
-									{$pages['current']} </a>
-			HEREDOC;
+	<li class="pagination__item pagination__item--active"><a class="pagination__link" href="#">{$pages['current']}</a></li>
+HEREDOC;
 		}
-
 
 		if (!empty($pages['next'])) {
 
@@ -433,31 +430,33 @@ abstract class BaseUser extends \core\base\controller\BaseController
 				$href = $str . $item;
 
 				echo <<<HEREDOC
-				<a href="$href" class="catalog-section-pagination__item">
-									$item
-								</a>
-				HEREDOC;
+
+		<li class="pagination__item"><a class="pagination__link" href="$href">$item</a></li>
+
+		
+HEREDOC;
 			}
 		}
 
+		echo <<<HEREDOC
 
-		if (!empty($pages['forward'])) {
+</ul>
 
-			$href = $str . $pages['forward'];
+HEREDOC;
 
-			echo <<<HEREDOC
-			<a href="$href" class="catalog-section-pagination__item">
-									> </a>
-			HEREDOC;
-		}
 
 		if (!empty($pages['last'])) {
 
 			$href = $str . $pages['last'];
 
+			$path = PATH . TEMPLATE;
+
 			echo <<<HEREDOC
-			<a href="$href" class="catalog-section-pagination__item">
-									>> </a>
+			<a class="pagination__btn" href="$href">
+											<svg class="svg-sprite-icon icon-arrow pagination__icon">
+												<use xlink:href="{$path}assets/images/svg/symbol/sprite.svg#arrow"></use>
+											</svg>
+			</a>			
 			HEREDOC;
 		}
 	}
