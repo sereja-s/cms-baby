@@ -350,7 +350,7 @@ $(document).ready(function () {
 	/* Боковой скролл */
 
 
-	var productDetailWidth = function productDetailWidth() {
+/* 	var productDetailWidth = function productDetailWidth() {
 		var detailArr = $('.product-details-navigation__item'),
 			detailWidth = 0;
 
@@ -360,7 +360,7 @@ $(document).ready(function () {
 
 		;
 		$('.product-details-navigation').css('min-width', detailWidth);
-	};
+	}; */
 	/* Функция для перекидки product-info__footer в product__header на разрешении экрана под планшеты */
 
 
@@ -391,7 +391,7 @@ $(document).ready(function () {
 	colorClicked();
 	productSlider();
 	scrollToElement();
-	productDetailWidth();
+	/* productDetailWidth(); */
 	productDetailTablet();
 }); // Preloader 
 
