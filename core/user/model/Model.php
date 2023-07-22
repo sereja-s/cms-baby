@@ -62,6 +62,7 @@ class Model extends \core\base\model\BaseModel
 		// все дальнейшие действия выполняем если пришли товары
 		if ($goodsnew) {
 
+			// =Выпуск №141 | Пользовательская часть | Добавление в корзину часть 3
 			if (!empty($this->showColumns('goodsnew')['discount'])) {
 
 				foreach ($goodsnew as $key => $item) {

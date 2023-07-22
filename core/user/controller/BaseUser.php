@@ -577,6 +577,7 @@ HEREDOC;
 				continue;
 			}
 
+			// соберём в св-ве корзины товары c имеющимися в ней id товаров
 			$this->cart['goods'][$id] = $goods[$id];
 
 			// переложим в корзину количество:
@@ -608,7 +609,7 @@ HEREDOC;
 		// если в cart['goods'] не пусто, сформируем в корзине три ячейки дополнения к товару и установим им значение ноль:
 		$this->cart['total_sum'] = $this->cart['total_old_sum'] = $this->cart['total_qty'] = 0;
 
-
+		// пробежимся в цикле по товарам в корзине
 		foreach ($this->cart['goods'] as $item) {
 
 			$this->cart['total_qty'] += $item['qty'];

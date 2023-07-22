@@ -911,6 +911,7 @@ footer {
 	/* width: 150px; */
 	line-height: 1.4;
 	margin-top: 30px;
+	padding-right: 5px;
 }
 
 @media screen and (max-width: 767px) {
@@ -938,7 +939,7 @@ footer {
 	align-items: center;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .footer__bottom {
@@ -1332,7 +1333,7 @@ footer {
 	fill: rgba(75, 75, 75, 0.5);
 	height: 21px;
 	width: 15px;
-	margin-right: 10px;
+	margin-right: 5px;
 }
 
 .header-address__text {
@@ -2086,7 +2087,7 @@ footer {
 	display: flex;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
-	justify-content: center;	
+	justify-content: center;
 }
 
 .pagination__wrapper {
@@ -2204,6 +2205,7 @@ footer {
 .select.select--open .select__body {
 	display: block;
 }
+
 .select.select--open .select__icon {
 	transform: rotate(270deg);
 }
@@ -2230,7 +2232,7 @@ footer {
 @media screen and (max-width: 767px) {
 	.select__header {
 		flex-direction: column;
-		min-width: 50px;		
+		min-width: 50px;
 	}
 }
 
@@ -2282,13 +2284,13 @@ footer {
 	z-index: 1;
 }
 
-.select-list__item{
+.select-list__item {
 	height: 40px;
 	line-height: 40px;
 	padding: 0 10px;
 }
 
-.select-list__item.order-desc{
+.select-list__item.order-desc {
 	color: #f77f00;
 	font-weight: 700;
 }
@@ -2985,6 +2987,13 @@ footer {
 @media screen and (max-width: 425px) {
 	.title-page {
 		font-size: 22px;
+		padding-right: 5px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.title-page {
+		font-size: 21px;
 	}
 }
 
@@ -4901,7 +4910,7 @@ footer {
 
 .filter-mobile__close-icon {
 	width: 35px;
-	height: 35px;	
+	height: 35px;
 }
 
 .category__header {
@@ -4948,7 +4957,7 @@ footer {
 	display: flex;
 }
 
-.category__filter {	
+.category__filter {
 	flex: 0 0 280px;
 	max-width: 280px;
 	padding: 10px;
@@ -5107,7 +5116,8 @@ footer {
 .amount_change {
 	display: flex;
 	width: 100px;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: 700;
 	color: #555;
 	margin-bottom: 0;
 	margin-right: 10px;
@@ -5117,11 +5127,10 @@ footer {
 
 .amount_change button {
 	background: none;
-	font-size: 10px;
+	font-size: 12px;
 	border: none;
 	width: 40px;
-	text-align: center;
-	font-size: 10px;
+	text-align: center;	
 	font-weight: 700;
 	color: #cacaca;
 	min-width: 30px;

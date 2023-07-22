@@ -5,7 +5,7 @@
 
 		<section class="s-product">
 			<div class="container">
-				<div class="product">
+				<div class="product" data-productContainer>
 					<div class="product__header">
 						<div class="product-slider">
 
@@ -61,16 +61,19 @@
 							<div class="product-info__header">
 								<h2 class="title-page"><?= $data['name'] ?></h2>
 								<!-- <img class="product-info__logo" src="static/images/content/brands/img-4.jpg" alt=""> -->
+
 								<div class="cart_form">
 									<div class="amount_change">
 
-										<button class="amount__down down">
+										<button class="amount__down down" data-quantityMinus>
 											<i class="fas fa-minus"></i>
 										</button>
 
-										<input type="text" name="amount_input" aria-label="Количество данного товара" class="amount_input" data-max-count="1" data-increment-count="1" value="1" />
+										<span class="amount_input" data-quantity><?= $this->cart['goods'][$data['id']]['qty'] ?? 1 ?></span>
 
-										<button class="amount__up up">
+										<!-- <input type="text" name="amount_input" aria-label="Количество данного товара" class="amount_input" data-quantity value="1" /> -->
+
+										<button class="amount__up up" data-quantityPlus>
 											<i class="fas fa-plus"></i>
 										</button>
 									</div>
@@ -78,48 +81,7 @@
 							</div>
 
 							<div class="product-info__body">
-								<div class="product-info__row">
-									<!-- <div class="product-rating">
-										<div class="product-rating__stars">
-											<svg class="svg-sprite-icon icon-star product-rating__icon product-rating__icon--active">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#star"></use>
-											</svg>
-											<svg class="svg-sprite-icon icon-star product-rating__icon product-rating__icon--active">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#star"></use>
-											</svg>
-											<svg class="svg-sprite-icon icon-star product-rating__icon product-rating__icon--active">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#star"></use>
-											</svg>
-											<svg class="svg-sprite-icon icon-star product-rating__icon product-rating__icon--active">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#star"></use>
-											</svg>
-											<svg class="svg-sprite-icon icon-star product-rating__icon product-rating__icon--active">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#star"></use>
-											</svg>
-										</div><a class="product-info__link" href="#">3 отзыва</a>
-									</div> -->
-									<!-- <div class="product-info__articul"> <span class="product__text">Артикул: <b>3014</b> </span></div> -->
-								</div>
-								<!-- <div class="product-info__row">
-									<div class="product-color"><span class="product__text">Выберите-цвет</span>
-										<ul class="color-list">
-											<li class="color-list__item" style="background-color:#c0c0c0"> </li>
-											<li class="color-list__item" style="background-color:#00FF00"> </li>
-											<li class="color-list__item" style="background-color:#ff69b4"> </li>
-											<li class="color-list__item" style="background-color:#1089ff"> </li>
-											<li class="color-list__item" style="background-color:#ff0000"> </li>
-										</ul>
-									</div>
-									<div class="product-available"><span class="product__text">Наличие:</span>
-										<div class="product-available-view">
-											<div class="product-available-view__item"></div>
-											<div class="product-available-view__item"></div>
-											<div class="product-available-view__item"></div>
-											<div class="product-available-view__item"></div>
-											<div class="product-available-view__item"></div>
-										</div>
-									</div>
-								</div> -->
+
 								<div class="product-info__row">
 									<div class="product-price">
 
@@ -130,10 +92,13 @@
 										<?php endif; ?>
 
 										<span class="product-price__current"><?= $data['price'] ?>&nbsp;руб.</span>
-										<!-- <a class="product-info__link" href="#">Нашли дешевле?</a> -->
+
 									</div>
 									<div class="product-actions">
+
+										<!-- атрибут: data-toCartAdded будет устанавливаться если такой товар уже есть в корзине -->
 										<a data-addToCart="<?= $data['id'] ?>" <?= !empty($this->cart['goods'][$data['id']]) ? 'data-toCartAdded' : '' ?> class="btn btn--bg-orange btn--big" href="#">В корзину</a>
+
 										<a data-addToCart="<?= $data['id'] ?>" data-onClick class="btn btn--transparent-gray btn--big" href="#">Купить в 1 клик </a>
 									</div>
 								</div>
@@ -154,23 +119,10 @@
 							<div class="tabs__body product-details__body">
 								<div class="tab tab-description tab--active">
 									<div class="content-block">
+
 										<h2 class="title-section">Описание</h2>
 										<p class="text"><?= $data['content'] ?></p>
-										<!-- <h4 class="title-small">Особенности беговела Pukylino:</h4>
-										<ul class="product-list">
-											<li class="product-list__item">Можно использовать с 1 года (минимальный рост — 75 см).</li>
-											<li class="product-list__item">Колеса из прочного пластика.</li>
-											<li class="product-list__item">Четыре варианта расцветки на выбор.</li>
-											<li class="product-list__item">Максимально допустимый вес ездока — 20 кг.</li>
-											<li class="product-list__item">Четыре крупных бесшумных колеса.</li>
-											<li class="product-list__item">Легкость управления.</li>
-											<li class="product-list__item">Алюминиевый корпус.</li>
-											<li class="product-list__item">Удобные не скользящие ручки с расширением по краям.</li>
-											<li class="product-list__item">Размеры модели — 51x26x22 см.</li>
-											<li class="product-list__item">Спроектирован и изготовлен в Германии.</li>
-											<li class="product-list__item">Гарантия на транспортное средство — 2 года.</li>
-										</ul>
-										<p class="text">Возьмите с собой на прогулку красивый беговел. Сын или дочка будут кататься и с любопытством изучать окружающий мир! </p> -->
+
 									</div>
 								</div>
 								<div class="tab tab-characteristics">
@@ -219,7 +171,7 @@
 								</div>
 								<div class="product-info-advantage__body">
 									<ul class="product-list product-list--advantage">
-										<li class="product-list__item">Наличные</li>
+										<li class="product-list__item" style="font-size: 14px;">Наличные</li>
 									</ul>
 								</div>
 							</div>
@@ -234,47 +186,14 @@
 
 								</div>
 							</div>
-							<!-- <div class="product-info-advantage">
-										<div class="product-info-advantage__header">
-											<svg class="svg-sprite-icon icon-map product-info-advantage__icon">
-												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#map"></use>
-											</svg><span class="product-info-advantage__title">Самовывоз</span>
-										</div>
-										<div class="product-info-advantage__body">
-											<p class="product__text"><?= $this->set['address'] ?></p>
-											
-										</div>
-									</div> -->
+
 						</div>
 					</div>
 
 				</div>
 			</div>
 		</section>
-		<!-- <section class="s-advantages">
-			<div class="container">
-				<div class="advantages">
-					<div class="advantage">
-						<svg class="svg-sprite-icon icon-guarantee advantage__icon">
-							<use xlink:href="static/images/svg/symbol/sprite.svg#guarantee"></use>
-						</svg>
-						<div class="advantage__body"><span class="advantage__title">Гарантия</span><span class="advantage__descr">качества всех товаров</span></div>
-					</div>
-					<div class="advantage">
-						<svg class="svg-sprite-icon icon-delivery advantage__icon">
-							<use xlink:href="static/images/svg/symbol/sprite.svg#delivery"></use>
-						</svg>
-						<div class="advantage__body"><span class="advantage__title">Доставка</span><span class="advantage__descr">по Москве и области</span></div>
-					</div>
-					<div class="advantage">
-						<svg class="svg-sprite-icon icon-pay advantage__icon">
-							<use xlink:href="static/images/svg/symbol/sprite.svg#pay"></use>
-						</svg>
-						<div class="advantage__body"><span class="advantage__title">Оплата</span><span class="advantage__descr">онлайн и наличными </span></div>
-					</div>
-				</div>
-			</div>
-		</section> -->
+
 		<!-- <section class="s-slider" id="l-sam-goods">
 			<div class="container">
 				<div class="products-border-line-slider">

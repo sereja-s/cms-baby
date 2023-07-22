@@ -1,6 +1,6 @@
 <?php if (!empty($data)) : ?>
 
-	<div class="product-prev">
+	<div class="product-prev" data-productContainer>
 		<div class="product-prev__header">
 			<div class="js-product-prev__slider"><a class="product-prev__img-wrapper" href="<?= $this->alias(['product' => $data['alias']]) ?>"><img class="product-prev__img" src="<?= $this->img($data['img']) ?>" alt="<?= $data['name'] ?>"></a></div>
 		</div>
