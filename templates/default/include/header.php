@@ -83,7 +83,16 @@
 							</svg><span class="header-address__text"><?= $this->set['address'] ?></span>
 						</div>
 						<div class="header__shop">
-							<div class="header-goods"><span class="header-goods__price">0 &#8381;</span><span class="header-goods__count">0 товаров</span></div>
+							<div class="header-goods">
+								<span class="header-goods__price" data-totalSum><?= $this->cart['total_sum'] ?? 0 ?> &#8381;</span>
+								<div class="goods-price" style="display: flex;">
+
+									<span style="padding-right: 5px" class="header-goods__count" data-totalQty><?= $this->cart['total_qty'] ?? 0 ?></span>
+									<span class="header-goods__count">товаров</span>
+
+								</div>
+
+							</div>
 						</div>
 						<div class="header-basket">
 
@@ -352,6 +361,11 @@
 									<svg class="svg-sprite-icon icon-basket mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#basket"></use>
 									</svg></a></li>
+
+							<div class="header-goods">
+								<span class="header-goods__count" data-totalQty><?= $this->cart['total_qty'] ?? 0 ?></span>
+							</div>
+
 						</ul>
 					</nav>
 				</div>

@@ -296,14 +296,14 @@ function addToCart() {
 			// опишем объект, который будем отдавать на сервер
 			let cart = {}
 
-			// в св-во: id объекта положим id текущего элемента, имеющего атрибут: data-addToCart
+			// в св-во: id объекта: cart положим значение (здесь- id) атрибута: data-addToCart для текущего элемента 
 			cart.id = +item.getAttribute('data-addToCart')
 
 			if (cart.id && !isNaN(cart.id)) {
 
 				let productContainer = item.closest('[data-productContainer]') || document
 
-				// в св-во: qty объекта изначально положим null
+				// в св-во: qty объекта: cart изначально положим null
 				cart.qty = null
 
 				let qtyBlock = productContainer.querySelector('[data-quantity]')
@@ -333,8 +333,9 @@ function addToCart() {
 
 							res = JSON.parse(res)
 
-							console.log(res)
+							//console.log(res)
 
+							// +Выпуск №142 | Пользовательская часть | Добавление в корзину часть 4
 							if (typeof res.current === 'undefined') {
 
 								throw new Error('')
