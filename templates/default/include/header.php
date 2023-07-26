@@ -62,8 +62,17 @@
 						</nav>
 						<nav class="header__nav header__nav--right inform-nav">
 							<ul class="inform-nav__list">
-								<li class="inform-nav__item"><a class="inform-nav__link" href="">Регистрация</a></li>
-								<li class="inform-nav__item"><a class="inform-nav__link" href="">Вход</a></li>
+
+								<?php if (!$this->userData) : ?>
+
+									<li class="inform-nav__item"><a class="inform-nav__link" href="#" data-popup="registration-popup">Регистрация</a></li>
+
+								<?php else : ?>
+
+									<li class="inform-nav__item"><a class="inform-nav__link" href="#" data-popup="inp-popup">Вход</a></li>
+
+								<?php endif; ?>
+
 							</ul>
 						</nav>
 					</div>
@@ -88,7 +97,7 @@
 								<div class="goods-price" style="display: flex;">
 
 									<span style="padding-right: 5px" class="header-goods__count" data-totalQty><?= $this->cart['total_qty'] ?? 0 ?></span>
-									<span class="header-goods__count">товаров</span>
+									<span class="header-goods__count">товара(-ов)</span>
 
 								</div>
 
@@ -353,7 +362,7 @@
 									<svg class="svg-sprite-icon icon-search mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#search"></use>
 									</svg></a></li>
-							<li class="mobile-user-nav__item"><a class="mobile-user-nav__link" href="#">
+							<li class="mobile-user-nav__item"><a class="mobile-user-nav__link" href="<?= $this->userData ? $this->alias('lk') : '#' ?>" <?= !$this->userData ? 'data-popup = "login-popup"' : '' ?>>
 									<svg class="svg-sprite-icon icon-user mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#user"></use>
 									</svg></a></li>

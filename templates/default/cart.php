@@ -105,14 +105,14 @@
 						</div>
 
 						<div class="cart-page__total-item">
-							<p style="font-size: 13px; line-height: 1.5;">После оформления заказа наш сотрудник свяжется с вами для уточнения заказа (наличия товара, стоимости, оплаты и др.) </p>
+							<p style="font-size: 14px; line-height: 1.5;">После оформления заказа наш сотрудник свяжется с вами для уточнения заказа (наличия товара, стоимости, оплаты и др.) </p>
 						</div>
 
 						<div class="cart-page__delivery-button">
 							<a href="#cart-contacts" class="cart-page__delivery-button-link scroll-to" style="text-align: center;">Перейти к оформлению заказа</a>
 						</div>
 
-						<div class="category-filter__result" style="padding: 15px 5px 5px 5px; text-align:center">
+						<div class="category-filter__result" style="padding: 25px 5px 5px 5px; text-align:center">
 							<a href="<?= $this->alias(['cart' => 'remove']) ?>" class="category-filter__result-name">Очистить корзину</a>
 						</div>
 
@@ -127,7 +127,7 @@
 
 					<?php if (!empty($this->delivery)) : ?>
 
-						<h3 class="h3-title cart-page__get-delivery-title">Способ доставки</h3>
+						<h3 class="h3-title cart-page__get-delivery-title" style="padding-bottom: 20px;">Способ доставки</h3>
 
 						<div class="cart-page__gd-item">
 
@@ -149,7 +149,7 @@
 
 					<?php if (!empty($this->payments)) : ?>
 
-						<h3 class="h3-title cart-page__get-pay-title">Способ оплаты</h3>
+						<h3 class="h3-title cart-page__get-pay-title" style="padding-bottom: 20px;">Способ оплаты</h3>
 
 						<div class="cart-page__gp-wrapper">
 
@@ -169,7 +169,7 @@
 				</div>
 
 				<div class="cart-page__get-contacts">
-					<h3 class="h3-title cart-page__get-contacts-title" style="text-align:center; font-size: 18px; font-weight: 500; padding-bottom: 25px;">Контактные данные</h3>
+					<h3 class="h3-title cart-page__get-contacts-title" style="text-align:center; font-size: 18px; padding-bottom: 25px;">Контактные данные</h3>
 
 					<div class="cart-page__gс-form">
 						<div class="cart-page__gc-input-block">
@@ -206,11 +206,11 @@
 
 					<div class="cart-page__gс-form">
 						<div class="cart-page__gc-item-check">
-							<label><input type="checkbox" required> Согласен на обработку персональных данных</label>
+							<label><input type="checkbox" required>&nbsp;&nbsp;Согласен на обработку персональных данных</label>
 
-							<?php if (!empty($this->menu['information'])) : ?>
+							<?php if (!empty($this->menu['information-menu'])) : ?>
 
-								<?php foreach ($this->menu['information'] as $item) : ?>
+								<?php foreach ($this->menu['information-menu'] as $item) : ?>
 
 									<?php if ($item['alias'] === 'politika-konfidentsialnosti') : ?>
 

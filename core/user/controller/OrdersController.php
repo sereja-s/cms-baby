@@ -37,7 +37,8 @@ class OrdersController extends BaseUser
 			$this->sendError('Отсутствуют данные для оформления заказа');
 		}
 
-		// валидационный массив:
+		// валидационный массив (здесь: ключи- поля формы которые мы ожидаем, а значения- ещё один массив с переводом названия 
+		// поля и применяемые к нему методы валидатора):
 		$validation = [
 			'name' => [
 				'translate' => 'Ваше имя', // перевод поля формы
@@ -70,10 +71,9 @@ class OrdersController extends BaseUser
 
 
 
-		// получим колонки(поля) из соответствующих таблиц
+		// получим колонки(поля) из соответствующих таблиц:
 
 		$columnsOrders = $this->model->showColumns('orders');
-
 		$columnsVisitors = $this->model->showColumns('visitors');
 
 

@@ -104,6 +104,10 @@ abstract class BaseUser extends \core\base\controller\BaseController
 			'where' => ['visible' => 1, 'show_top_menu' => 1],
 			'order' => ['menu_position']
 		]);
+		$this->menu['information-menu'] = $this->model->get('information', [
+			'where' => ['visible' => 1],
+			'order' => ['menu_position']
+		]);
 
 		//-------------------------------------------------------------------------------------------------------------//
 
@@ -616,7 +620,7 @@ HEREDOC;
 
 			$this->cart['total_sum'] += round($item['qty'] * $item['price'], 2);
 
-			// Выпуск №143 | Пользовательская часть | Корзина товаров | ч 1
+			// +Выпуск №143 | Пользовательская часть | Корзина товаров | ч 1
 			$this->cart['total_old_sum'] += round($item['qty'] * ($item['old_price'] ?? $item['price']), 2);
 
 			// Выпуск -№143
@@ -627,7 +631,7 @@ HEREDOC;
 
 		$this->cart['total_discount'] = ($this->cart['total_old_sum'] - $this->cart['total_sum']);
 
-		// Выпуск №143
+		// +Выпуск №143
 		if ($this->cart['total_sum'] === $this->cart['total_old_sum']) {
 
 			// разрегистрируем ячейку (т.е. не будем выводить перечёркнутую сумму)
@@ -678,7 +682,7 @@ HEREDOC;
 	}
 
 	/**
-	 * Метод удаления данных из корзины (Выпуск №144)
+	 * Метод удаления данных(товаров) из корзины (Выпуск №144)
 	 */
 	protected function deleteCartData($id)
 	{
@@ -686,13 +690,14 @@ HEREDOC;
 
 		if ($id) {
 
+			// получим козину (по ссылке)
 			$cart = &$this->getCart();
 
 			unset($cart[$id]);
 
 			$this->updateCart();
 
-			// вызываем метод с обязательным пересчётом (передаём true)
+			// вызываем метод с обязательным пересчётом(передаём true)
 			$this->getCartData(true);
 		}
 	}
