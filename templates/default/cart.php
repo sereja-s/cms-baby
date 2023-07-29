@@ -214,7 +214,7 @@
 
 									<?php if ($item['alias'] === 'politika-konfidentsialnosti') : ?>
 
-										<a class="footer__nav-link" href="<?= $this->alias(['information' => $item['alias']]) ?>" style="text-decoration: underline;"><?= $item['name'] ?></a>
+										<a class="footer__nav-link" href="<?= $this->alias(['information' => $item['alias']]) ?>" ><?= $item['name'] ?></a>
 
 									<?php endif; ?>
 

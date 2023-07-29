@@ -5638,7 +5638,7 @@ footer {
 	margin-top: 60px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	.cart-page__get-contacts {
 		width: 100%;
 	}
@@ -5807,6 +5807,14 @@ footer {
 	font-size: 16px;
 	line-height: 20px;
 	color: #1e1e1e;	
+}
+
+/* ===================================================================================================================== */
+
+@media screen and (max-width: 768px) {
+	.footer__nav-link {
+		padding-top: 20px;
+	}
 }
 
 /* ===================================================================================================================== */

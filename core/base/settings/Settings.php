@@ -98,6 +98,7 @@ class Settings
 		'category' => ['name' => 'Категории'],
 		'goodsnew' => ['name' => 'Товары по категориям'],
 		'news' => ['name' => 'Новости'],
+		'reviews' => ['name' => 'Отзывы'],
 		'information' => ['name' => 'Информация (меню)'],
 	];
 

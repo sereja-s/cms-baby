@@ -47,7 +47,7 @@
 					<ul class="footer-nav">
 						<li class="footer-nav__item"><a class="footer-nav__link" href="<?= $this->alias('news') ?>">Новости</a></li>
 						<li class="footer-nav__item"><a class="footer-nav__link" href="<?= $this->alias('contacts') ?>">Контакты</a></li>
-						<li class="footer-nav__item"><a class="footer-nav__link" href="">Карта сайта</a></li>
+						<!-- <li class="footer-nav__item"><a class="footer-nav__link" href="">Карта сайта</a></li> -->
 					</ul>
 
 				</div>
@@ -87,7 +87,22 @@
 	</div>
 
 	<div class="footer__bottom">
-		<div class="container"><span class="copyright">сделано в &nbsp<a class="footer__personal-data" href="<?= $this->set['external_alias'] ?>">САЙТ ПОСТРОЕН</a></span><a class="footer__personal-data" href="#">Политика обработки персональных данных</a></div>
+		<div class="container"><span class="copyright">сделано в &nbsp<a class="footer__personal-data" href="<?= $this->set['external_alias'] ?>">САЙТ ПОСТРОЕН</a></span>
+
+			<?php if (!empty($this->menu['information-menu'])) : ?>
+
+				<?php foreach ($this->menu['information-menu'] as $item) : ?>
+
+					<?php if ($item['alias'] === 'politika-konfidentsialnosti') : ?>
+
+						<a class="footer__personal-data" href="<?= $this->alias(['information' => $item['alias']]) ?>"><?= $item['name'] ?></a>
+
+					<?php endif; ?>
+
+				<?php endforeach; ?>
+
+			<?php endif; ?>
+		</div>
 	</div>
 </footer>
 </div>

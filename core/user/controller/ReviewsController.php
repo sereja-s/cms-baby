@@ -6,19 +6,19 @@ use core\admin\model\Model;
 use core\base\controller\BaseController;
 
 
-class NewsController extends BaseUser
+class ReviewsController extends BaseUser
 {
 
-	protected $news;
+	protected $reviews;
 
 	protected function inputData()
 	{
 
 		parent::inputData();
 
-		$this->news = $this->model->get('news', [
+		$this->reviews = $this->model->get('reviews', [
 			'where' => ['visible' => 1],
-			'order' => ['date'],
+			'order' => ['datetime'],
 			'order_direction' => ['DESC'],
 			'limit' => 10
 		]);
