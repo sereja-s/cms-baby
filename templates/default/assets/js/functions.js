@@ -549,7 +549,7 @@ function phoneValidate(item) {
 }
 
 //================================== поиск по каталогу ================================================================//
-menuSearch();
+/* menuSearch();
 
 function menuSearch() {
 
@@ -584,7 +584,7 @@ function menuSearch() {
 		searchBtn.classList.remove('vg-search-reverse');
 	});
 
-}
+} */
 
 
 // в переменную сохраним самовызывающуюся функцию, внутри которой будет реализовано замыкание (для работы с
@@ -731,32 +731,38 @@ let searchResultHover = (() => {
 // самовызывающуюся функцию необходимо вызывать сразу после того как её код описан
 searchResultHover()
 
+
+
+document.querySelectorAll('input[name=search]').forEach(item => search(item));
+
 /**
  * Метод работы поиска в админке (вывод подсказок(ссылок)) Выпуск №105
  */
-function search() {
+function search(item) {
 
-	let searchInput = document.querySelector('input[name=search]');
+	//let searchInput = document.querySelector('input[name=search]');
 
-	//console.log(searchInput);
+	//console.log(searchInput);	
 
-	if (searchInput) {
+	if (item) {
 
 		// (событие oninput происходит сразу после изменения значения элемента)
 		//searchInput.oninput = () => {
 
 		// search - событие возникает после того как пользователь нажимает на клавишу Enter или нажимает кнопку "x" (отмена) в элементе input с type="search"
-		searchInput.addEventListener('search', () => {
+		item.addEventListener('search', () => {
 
 			// сделаем ограничение (подсказки(ссылки) появятся при вводе более одного символа в поисковой строке)
-			if (searchInput.value.length > 1) {
+			if (item.value.length > 1) {
+
+				let data = item;
 
 				$.ajax({
 					url: '/',
 					// в Ajax нам нужен объект: data
 					data: {
 						// в котором будет три поля (свойства)
-						data: searchInput.value, // в поле: data отправляем: searchInput.value
+						data: data.value, // в поле: data отправляем: searchInput.value
 						table: document.querySelector('input[name="search_table"]').value, // ищем с приоритетом по товарам(получим соответствующее поле)
 						ajax: 'search' // управляющий флаг (для Ajax-контроллера)
 					},
@@ -768,22 +774,27 @@ function search() {
 
 							res = JSON.parse(res);
 
-							let resBlok = document.querySelector('.search_res');
+							let resBlok = document.querySelectorAll('.search_res');
 
-							let counter = res.length > 20 ? 20 : res.length;
+							resBlok.forEach(item => {
 
-							if (resBlok) {
+								console.log(item);
 
-								resBlok.innerHTML = '';
+								let counter = res.length > 20 ? 20 : res.length;
 
-								for (let i = 0; i < counter; i++) {
+								if (item) {
 
-									// на вход: 1- параметр: вставляем в конец, 2-ой: что вставляем
-									resBlok.insertAdjacentHTML('beforeend', `<a href="${res[i]['alias']}" class="search-popup__category-link">${res[i]['name']}</a><br>`);
+									item.innerHTML = '';
+
+									for (let i = 0; i < counter; i++) {
+
+										// на вход: 1- параметр: вставляем в конец, 2-ой: что вставляем
+										item.insertAdjacentHTML('beforeend', `<li class="search-popup__category-item"><a href="${res[i]['alias']}" class="search-popup__category-link">${res[i]['name']}</a></li>`);
+									}
+									// снова вызовем метод (т.к. там будут все неоходимые элементы)
+									searchResultHover();
 								}
-								// снова вызовем метод (т.к. там будут все неоходимые элементы)
-								searchResultHover();
-							}
+							})
 
 						} catch (e) {
 

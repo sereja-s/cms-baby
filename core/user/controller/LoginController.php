@@ -24,6 +24,7 @@ class LoginController extends BaseUser
 				case 'registration':
 
 					$this->registration();
+
 					break;
 			}
 		}
@@ -31,6 +32,11 @@ class LoginController extends BaseUser
 		throw new RouteException('Такой страницы не существует');
 	}
 
+	/**
+	 * Метод регистрации пользователя
+	 *
+	 * @return void
+	 */
 	protected function registration(): void
 	{
 
@@ -47,6 +53,7 @@ class LoginController extends BaseUser
 
 			unset($_POST['password']);
 		}
+
 		if (isset($_POST['password']) && $_POST['password'] !== $_POST['confirm_password']) {
 
 			$this->sendError('Пароли не совпадают');
@@ -54,6 +61,7 @@ class LoginController extends BaseUser
 
 		unset($_POST['confirm_password']);
 
+		// сделаем валидацию заполненных пользователем полей
 		$validation = [
 
 			'name' => [
@@ -104,6 +112,7 @@ class LoginController extends BaseUser
 		]);
 
 
+		// если пользователь с таким телефоном и эл.почтой уже есть:
 		if ($res) {
 
 			$res = $res[0];
@@ -125,7 +134,7 @@ class LoginController extends BaseUser
 
 			if (UserModel::instance()->checkUser($id)) {
 
-				$this->sendSuccess('Спасибо за регистрацию, ' . $_POST['name']);
+				$this->sendError('Спасибо за регистрацию, ' . $_POST['name']);
 			}
 		}
 

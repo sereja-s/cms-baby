@@ -190,18 +190,30 @@
 							<svg class="svg-sprite-icon icon-search search__icon">
 								<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#search"></use>
 							</svg>
-							<div class="search__body">
-								<form class="search__form">
+							<div id="popup-search" class="search__body" style="z-index: 100;">
+								<div class="search__form">
 									<div class="search__input-wrapper">
-										<input class="search__input" placeholder="Я хочу купить...">
+										<input class="search__input" type="search" name="search" placeholder="Я хочу купить...">
+										<input type="hidden" name="search_table" value="goodsnew">
 										<div class="search__clear">
 											<svg class="svg-sprite-icon icon-close search__clear-icon">
 												<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#close"></use>
 											</svg>
 										</div>
 									</div>
-									<input class="search__btn" type="submit" value="Найти">
-								</form>
+
+								</div>
+								<ul class="search-popup__category-list search_res">
+									<!-- <li class="search-popup__category-item">
+											<a href="#" class="search-popup__category-link"></a>
+									</li> -->
+								</ul>
+								<style>
+									/* Изменить цвет выпадающих ссылок при наведении */
+									.search-popup__category-item a.search_act {
+										background-color: #e5e5e5
+									}
+								</style>
 							</div>
 						</div>
 					</div>
@@ -342,26 +354,64 @@
 
 						</div>
 					</div>
-					<div class="mobile__logo logo"><img class="logo__img" src="<?= $this->img($this->set['img']) ?>" alt="<?= $this->set['name'] ?>"></div>
-					<div class="search">
-						<form class="search__form">
+					<a href="<?= $this->alias() ?>" class="mobile__logo logo"><img class="logo__img" src="<?= $this->img($this->set['img']) ?>" alt="<?= $this->set['name'] ?>"></a>
+
+
+					<div id="popup-search" class="search" style="z-index: 1000;">
+						<div class="search__form">
 							<div class="search__input-wrapper">
-								<input class="search__input" placeholder="Я хочу купить...">
-								<div class="search__clear">
-									<svg class="svg-sprite-icon icon-close search__clear-icon">
-										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#close"></use>
-									</svg>
-								</div>
+								<input class="search__input" type="search" name="search" placeholder="Я хочу купить...">
+								<input type="hidden" name="search_table" value="goodsnew">
 							</div>
-							<input class="search__btn" type="submit" value="Найти">
-						</form>
+						</div>
+						<ul class="search-popup__category-list search_res">
+									<!-- <li class="search-popup__category-item">
+											<a href="#" class="search-popup__category-link"></a>
+									</li> -->
+								</ul>
+						<style>
+							/* Изменить цвет выпадающих ссылок при наведении */
+							.search-popup__category-item a.search_act {
+								background-color: #e5e5e5
+							}
+						</style>
 					</div>
+
 					<nav class="mobile-user-nav">
 						<ul class="mobile-user-nav__list">
-							<li class="mobile-user-nav__item"><a class="mobile-user-nav__link" href="search.html">
-									<svg class="svg-sprite-icon icon-search mobile-user-nav__icon">
+							<li class="mobile-user-nav__item">
+								<a class="mobile-user-nav__link search" href="#">
+									<svg class="svg-sprite-icon search__icon icon-search mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#search"></use>
-									</svg></a></li>
+									</svg>
+									<div id="popup-search" class="search__body" style="z-index: 100;">
+										<div class="search__form">
+											<div class="search__input-wrapper">
+												<input class="search__input" type="search" name="search" placeholder="Я хочу купить...">
+												<input type="hidden" name="search_table" value="goodsnew">
+												<div class="search__clear">
+													<svg class="svg-sprite-icon icon-close search__clear-icon">
+														<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#close"></use>
+													</svg>
+												</div>
+											</div>
+
+										</div>
+										<ul class="search-popup__category-list search_res">
+									<!-- <li class="search-popup__category-item">
+											<a href="#" class="search-popup__category-link"></a>
+									</li> -->
+								</ul>
+										<style>
+											/* Изменить цвет выпадающих ссылок при наведении */
+											.search-popup__category-item.search_act {
+												background-color: #e5e5e5
+											}
+										</style>
+									</div>
+
+								</a>
+							</li>
 							<li class="mobile-user-nav__item"><a class="mobile-user-nav__link" href="<?= $this->userData ? $this->alias('lk') : '#' ?>" <?= !$this->userData ? 'data-popup = "login-popup"' : '' ?>>
 									<svg class="svg-sprite-icon icon-user mobile-user-nav__icon">
 										<use xlink:href="<?= PATH . TEMPLATE ?>assets/images/svg/symbol/sprite.svg#user"></use>

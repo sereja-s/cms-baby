@@ -42,6 +42,7 @@ $(document).ready(function () {
 
 		$(document).on('click', '.search__clear', function () {
 			$(this).closest('.header__search').removeClass('search--open');
+			$(this).closest('.search').removeClass('search--open');
 		});
 	};
 
@@ -203,7 +204,7 @@ $(document).ready(function () {
 		$(document).on('click', '.mobile-menu__toggle', function () {
 			$(this).parent().addClass('mobile-menu--open');
 		});
-		$(document).on('click', '.mobile-menu__close', function () {
+		$(document).on('click', '.mobile-menu__header', function () {
 			$(this).closest('.mobile-menu').removeClass('mobile-menu--open');
 		});
 	};
@@ -350,17 +351,17 @@ $(document).ready(function () {
 	/* Боковой скролл */
 
 
-/* 	var productDetailWidth = function productDetailWidth() {
-		var detailArr = $('.product-details-navigation__item'),
-			detailWidth = 0;
-
-		for (var i = 0; i < detailArr.length; i++) {
-			detailWidth = detailWidth + detailArr[i].offsetWidth;
-		}
-
-		;
-		$('.product-details-navigation').css('min-width', detailWidth);
-	}; */
+	/* 	var productDetailWidth = function productDetailWidth() {
+			var detailArr = $('.product-details-navigation__item'),
+				detailWidth = 0;
+	
+			for (var i = 0; i < detailArr.length; i++) {
+				detailWidth = detailWidth + detailArr[i].offsetWidth;
+			}
+	
+			;
+			$('.product-details-navigation').css('min-width', detailWidth);
+		}; */
 	/* Функция для перекидки product-info__footer в product__header на разрешении экрана под планшеты */
 
 
